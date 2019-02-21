@@ -1,0 +1,44 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar-brand {
+    font-size: 30px;
+    margin-right: 1.7rem;
+}
+
+.navbar-brand:hover {
+    animation: rotating 2s linear infinite;
+}
+
+.navbar-brand img {
+    height: 40px;
+    width: 40px;
+    margin-top: -10px;
+}
+
+.nav-item {
+    font-size: 17px;
+}
+
+.nav-link{
+    padding-right: 20px;
+}
+
+
+@-webkit-keyframes rotating
+/* Safari and Chrome */
+
+    {
+    from {
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}

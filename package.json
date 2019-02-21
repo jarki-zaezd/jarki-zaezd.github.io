@@ -1,0 +1,26 @@
+{
+  "name": "zaezd",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run webpack",
+    "webpack": "webpack -d --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Starmordar/Jarki-Zaezd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Starmordar/Jarki-Zaezd/issues"
+  },
+  "homepage": "https://github.com/Starmordar/Jarki-Zaezd#readme",
+  "dependencies": {
+    "webpack": "^4.29.5"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.2.3"
+  }
+}
