@@ -1,11 +1,16 @@
 body {
     padding: 0;
     margin: 0;
+    overflow-x: hidden;
 }
 
 .navbar-brand {
-    font-size: 30px;
-    margin-right: 1.7rem;
+    font-family: 'Metal Mania', cursive;
+    font-size: 35px;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    padding: 0;
+    margin-right: 30px;
 }
 
 .navbar-brand:hover {
@@ -13,24 +18,92 @@ body {
 }
 
 .navbar-brand img {
-    height: 40px;
-    width: 40px;
-    margin-top: -10px;
+    height: 35px;
+    width: 25px;
+    margin-top: -4px;
 }
 
-.nav-item {
+.dropdown-menu {
+    padding: 0;
+    width: 250px;
+}
+
+.dropdown-divider {
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu i {
+    font-size: 25px;
+    color: #333;
+    float: right;
+}
+
+.dropdown-item {
+    color: #333;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.nav-item{
+    margin-left: 5px;
+}
+.nav-link {
+    font-family: 'Open Sans', sans-serif;
     font-size: 17px;
-}
-
-.nav-link{
+    letter-spacing: 0.8px;
     padding-right: 20px;
 }
 
+#sec-1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-image: url('cropped-rsz_victor-xok-787718-unsplash.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center 50px;
+    background-repeat: no-repeat;
+}
 
-@-webkit-keyframes rotating
-/* Safari and Chrome */
+#sec-1 .info {
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    margin-top: 23%;
+}
 
-    {
+#sec-1 .info h2 {
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 1.6px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+#sec-1 .info p {
+    letter-spacing: 1px;
+    color: rgb(226, 226, 226);
+    margin-bottom: 40px;
+}
+
+#sec-1 .info a {
+    font-size: 20px;
+    color: white;
+    background: rgb(68, 112, 68);
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+#sec-1 .info a:hover {
+    background: rgb(99, 172, 99);
+}
+
+#sec-1 .info a:focus {
+    box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, .5);
+}
+
+@-webkit-keyframes rotating {
     from {
         -webkit-transform: rotate(0deg);
         -o-transform: rotate(0deg);
