@@ -4,6 +4,12 @@ body {
     overflow-x: hidden;
 }
 
+.navbar {
+    -webkit-box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.33);
+    box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.33);
+}
+
 .navbar-brand {
     font-family: 'Metal Mania', cursive;
     font-size: 35px;
@@ -25,7 +31,7 @@ body {
 
 .dropdown-menu {
     padding: 0;
-    width: 250px;
+    width: 300px;
 }
 
 .dropdown-divider {
@@ -41,8 +47,8 @@ body {
 
 .dropdown-item {
     color: #333;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .nav-item {
@@ -106,21 +112,21 @@ body {
 
 #sec-2 {
     position: relative;
-    height: 100vh;
+    background: rgb(250, 250, 250);
     min-height: 100vh !important;
-    background: rgb(241, 241, 241);
 }
 
 #sec-2 .container {
     padding-top: 70px;
+    margin-bottom: 70px;
 }
 
 #sec-2 header h2 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 40px;
+    font-size: 45px;
+    font-weight: 400;
     letter-spacing: 1.4px;
-    font-weight: 500;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 #sec-2 header p {
@@ -130,16 +136,18 @@ body {
     margin-bottom: 60px;
 }
 
-#sec-2 .card-body {
-    padding: 0;
+#sec-2 .card {
+    width: 350px;
+    padding: 20px 22px 10px 22px;
+    margin: 15px;
+    border: 0;
+    -webkit-box-shadow: 0px 9px 31px -2px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 0px 9px 31px -2px rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 12px 31px -2px rgba(0, 0, 0, 0.20);
 }
 
-#sec-2 .card {
-    width: 360px;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding: 15px 25px 10px 25px;
-    border: 0;
+#sec-2 .card-body {
+    padding: 0;
 }
 
 #sec-2 .card i {
@@ -151,21 +159,36 @@ body {
     font-family: 'Open Sans', sans-serif;
     font-size: 25px;
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 14px;
 }
 
 #sec-2 .card p {
-    font-size: 17px;
-    letter-spacing: 0.3px;
-    line-height: 1.1;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
     font-weight: 400;
+    line-height: 1.4;
     color: #555555;
+    margin-bottom: 15px;
+}
+
+#sec-2 .card img {
+    width: 100%;
     margin-bottom: 20px;
 }
 
-#sec-2 .card img{
-    width: 100%;
-    margin-bottom: 20px;
+#sec-2 .card .card-footer {
+    background: white;
+    padding-bottom: 5px;
+}
+
+#sec-2 .card .card-footer a {
+    float: right;
+}
+
+@media screen and (max-width: 1000px) {
+    .container {
+        max-width: 760px;
+    }
 }
 
 @-webkit-keyframes rotating {
