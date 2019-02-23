@@ -45,9 +45,10 @@ body {
     padding-bottom: 15px;
 }
 
-.nav-item{
+.nav-item {
     margin-left: 5px;
 }
+
 .nav-link {
     font-family: 'Open Sans', sans-serif;
     font-size: 17px;
@@ -101,6 +102,70 @@ body {
 
 #sec-1 .info a:focus {
     box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, .5);
+}
+
+#sec-2 {
+    position: relative;
+    height: 100vh;
+    min-height: 100vh !important;
+    background: rgb(241, 241, 241);
+}
+
+#sec-2 .container {
+    padding-top: 70px;
+}
+
+#sec-2 header h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 40px;
+    letter-spacing: 1.4px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+#sec-2 header p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    color: rgb(119, 119, 119);
+    margin-bottom: 60px;
+}
+
+#sec-2 .card-body {
+    padding: 0;
+}
+
+#sec-2 .card {
+    width: 360px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding: 15px 25px 10px 25px;
+    border: 0;
+}
+
+#sec-2 .card i {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+#sec-2 .card h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+#sec-2 .card p {
+    font-size: 17px;
+    letter-spacing: 0.3px;
+    line-height: 1.1;
+    font-weight: 400;
+    color: #555555;
+    margin-bottom: 20px;
+}
+
+#sec-2 .card img{
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 @-webkit-keyframes rotating {
