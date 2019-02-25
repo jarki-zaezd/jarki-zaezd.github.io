@@ -150,7 +150,8 @@ body {
     -webkit-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.10);
     -moz-box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.10);
     box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.10);
-    transition: all 250ms cubic-bezier(.25,.51,.46,1.05);;
+    transition: all 250ms cubic-bezier(.25, .51, .46, 1.05);
+    ;
 }
 
 #sec-2 .card:hover {
@@ -244,6 +245,61 @@ body {
 
 #sec-2 .card .card-footer a {
     float: right;
+}
+
+#sec-3 {
+    position: relative;
+    min-height: 100vh !important;
+}
+
+.calendar {
+    display: flex;
+    justify-content: center;
+}
+
+.calendar-info {
+    width: 500px;
+    margin: 25px;
+}
+
+.calendar-info .flatpickr-calendar {
+    width: 250px;
+    border: 0;
+}
+
+.calendar-info .flatpickr-days {
+    width: 250px;
+    height: 200px;
+    border: 0;
+}
+
+.flatpickr-day {
+    height: 35.7px;
+    line-height: 34px;
+}
+
+.calendar-info .dayContainer {
+    min-width: 200px !important;
+    width: 250px;
+    height: 230px;
+}
+
+.calendar-info .flatpickr-innerContainer {
+    border: 0;
+}
+
+.calendar-info .flatpickr-rContainer {
+    width: 250px;
+    height: 230px;
+}
+
+.calendar a {
+    margin-top: 30px;
+    margin-left: 80px;
+}
+
+.calendar-body {
+    width: 85%;
 }
 
 @media screen and (max-width: 1000px) {

@@ -1,4 +1,8 @@
-import {kek} from './functions/fn';
+// import flatpickr from "flatpickr";
+let calendarConfig = {
+    inline: true
+}
 
 
-console.log(kek(12));
+flatpickr(".mini-calendar", calendarConfig);
+

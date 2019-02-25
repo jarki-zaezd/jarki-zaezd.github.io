@@ -11,10 +11,13 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:500,400,700,800,300,600" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Metal+Mania" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Coming+Soon" rel="stylesheet" type="text/css">
-    <link href="src/assets/css/index.css" rel="stylesheet">
     <script src="src/javascript/jquery-3.3.1.min.js"></script>
     <script src="src/javascript/popper.min.js"></script>
     <script src="src/javascript/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_green.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <link href="src/assets/css/index.css" rel="stylesheet">
 </head>
 
 <body>
@@ -171,7 +174,32 @@
         </div>
         </div>
     </section>
+
+    <section id="sec-3">
+        <div class="calendar">
+            <div class="calendar-info">
+                <h2>My trip calendar</h2>
+                <p>Next trip is: <span>February 28, 2019</span></p>
+                <div class="mini-calendar"></div>
+                <a href="" class="btn btn-success">Plan trip</a>
+            </div>
+            <div class="calendar-body">
+                <div class="calendar-nav"></div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>one</th>
+                            <th>two</th>
+                            <th>three</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </section>
+
     <script src="./dist/main.js"></script>
+    <script src="./src/javascript/app.js"></script>
 </body>
 
 </html>
