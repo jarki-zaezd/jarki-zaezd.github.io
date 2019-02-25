@@ -269,7 +269,7 @@ body {
 
 .calendar-info .flatpickr-days {
     width: 250px;
-    height: 200px;
+    height: 250px;
     border: 0;
 }
 
@@ -281,7 +281,7 @@ body {
 .calendar-info .dayContainer {
     min-width: 200px !important;
     width: 250px;
-    height: 230px;
+    height: 250px;
 }
 
 .calendar-info .flatpickr-innerContainer {
@@ -290,7 +290,7 @@ body {
 
 .calendar-info .flatpickr-rContainer {
     width: 250px;
-    height: 230px;
+    height: 274px;
 }
 
 .calendar a {
