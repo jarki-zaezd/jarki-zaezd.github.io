@@ -348,6 +348,10 @@ body {
     border: 1px solid #ddd;
 }
 
+.calendar-body table{
+    height: 88vh;
+}
+
 .calendar-body thead tr {
     text-align: center;
 }
@@ -358,7 +362,7 @@ body {
 
 .calendar-body tbody th{
     cursor: pointer;
-    height: 130px;
+    height: 16.66%;
 }
 
 .calendar-body th{
