@@ -258,7 +258,6 @@ body {
 }
 
 .calendar-info {
-    width: 500px;
     margin: 25px;
 }
 
@@ -293,13 +292,85 @@ body {
     height: 274px;
 }
 
-.calendar a {
+.calendar .btn {
     margin-top: 30px;
     margin-left: 80px;
 }
 
 .calendar-body {
-    width: 85%;
+    display: flex;
+    flex-direction: column;
+    width: 84%;
+    margin-right: 1.5%;
+}
+
+.calendar-nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #1bbc9b;
+}
+
+.calendar-nav a {
+    color: white;
+    font-size: 13px;
+    top: 13px;
+    font-weight: 500;
+}
+
+.calendar-nav i {
+    font-size: 13px;
+    margin: 0px 4px;
+}
+
+.calendar-nav .next {
+    position: absolute;
+    right: 25px;
+}
+
+.calendar-nav .prev {
+    position: absolute;
+    left: 25px;
+}
+
+.calendar-nav .title {
+    font-family: Arial, serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    color: white;
+    line-height: 0;
+    margin: 22px 0;
+}
+
+.calendar-body table, th, tr {
+    border: 1px solid #ddd;
+}
+
+.calendar-body thead tr {
+    text-align: center;
+}
+
+.calendar-body tbody{
+    cursor: pointer;
+}
+
+.calendar-body tbody th{
+    cursor: pointer;
+    height: 130px;
+}
+
+.calendar-body th{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    position: relative;
+    width: 14.285%;
+}
+.calendar-body th .date{
+    position: absolute;
+    top: 0;
 }
 
 @media screen and (max-width: 1000px) {
