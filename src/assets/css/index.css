@@ -2,6 +2,7 @@ body {
     padding: 0;
     margin: 0;
     overflow-x: hidden;
+    position: relative;
 }
 
 .navbar {
@@ -348,7 +349,7 @@ body {
     border: 1px solid #ddd;
 }
 
-.calendar-body table{
+.calendar-body table {
     height: 88vh;
 }
 
@@ -356,25 +357,82 @@ body {
     text-align: center;
 }
 
-.calendar-body tbody{
+.calendar-body tbody {
     cursor: pointer;
 }
 
-.calendar-body tbody th{
+.calendar-body tbody th {
     cursor: pointer;
     height: 16.66%;
 }
 
-.calendar-body th{
+.calendar-body th {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 400;
     font-size: 13px;
     position: relative;
     width: 14.285%;
 }
-.calendar-body th .date{
+
+.calendar-body th .date {
     position: absolute;
     top: 0;
+}
+
+.choose-trip {
+    width: 700px;
+    height: 550px;
+    padding: 20px;
+    text-align: center;
+    visibility: hidden;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    margin: -225px 0 0 -350px;
+    background: white;
+    z-index: 999;
+}
+
+.overplay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(63, 63, 63, 0.77);
+    z-index: 900;
+}
+
+.choose-trip h3 {
+    margin-bottom: 30px;
+}
+
+.select-aria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+}
+
+.select-aria .select-item {
+    color: black;
+    text-decoration: none;
+    padding: 10px 0;
+    width: 150px;
+    margin: 10px;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.slide-trips {
+    margin-bottom: 50px;
+}
+
+.slide-trips .as {
+    background: grey;
+    width: 170px;
+    height: 130px;
+    margin: 0 15px;
 }
 
 @media screen and (max-width: 1000px) {

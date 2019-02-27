@@ -19,10 +19,12 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <link rel="stylesheet" href="src/assets/css/animate.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-    <link href="src/assets/css/index.css" rel="stylesheet">
     <script>
         new WOW().init();
     </script>
+    <link rel="stylesheet" type="text/css" href="src/assets/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="src/assets/slick/slick-theme.css" />
+    <link href="src/assets/css/index.css" rel="stylesheet">
 </head>
 
 <body>
@@ -213,10 +215,37 @@
                 </table>
             </div>
         </div>
+        <div class="choose-trip">
+            <h3>Start rolling rigt now</h3>
+            <div class="select-aria">
+                <a class="select-item" href="#">Pussy trip</a>
+                <a class="select-item" href="#">Savage trip</a>
+                <a class="select-item" href="#">Try escape trip</a>
+                <a class="select-item" href="#">Train trip</a>
+                <a class="select-item" href="#">No road trip</a>
+                <a class="select-item" href="#">Speed hack trip</a>
+            </div>
+            <div class="slide-trips">
+                <div class="as">as</div>
+                <div class="as">as</div>
+                <div class="as">as</div>
+                <div class="as">as</div>
+                <div class="as">1</div>
+            </div>
+            <a href="" class="btn btn-danger">Start rolling</a>
+        </div>
     </section>
-
+    <script src="src/javascript/jquery-3.3.1.min.js"></script>
+    <script src="src/assets/slick/slick.min.js"></script>
     <script src="./dist/main.js"></script>
     <script src="./src/javascript/app.js"></script>
+    <script>
+        $('.slide-trips').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+        });
+    </script>
 </body>
 
 </html>

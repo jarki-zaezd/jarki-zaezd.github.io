@@ -123,3 +123,11 @@ function changeDate(e) {
     updateCalendar();
     e.preventDefault();
 }
+
+$('th').click(function () {
+    $('.choose-trip').css('visibility', 'visible');
+
+    $('.choose-trip').addClass('animated delay-0.1s fadeInRight');
+
+    $('body').append('<div class="overplay"></div>');
+});
