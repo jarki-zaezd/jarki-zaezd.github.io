@@ -380,15 +380,15 @@ body {
 }
 
 .choose-trip {
-    width: 700px;
-    height: 550px;
+    width: 900px;
+    height: 650px;
     padding: 20px;
     text-align: center;
     visibility: hidden;
     position: fixed;
     top: 45%;
     left: 50%;
-    margin: -225px 0 0 -350px;
+    margin: -260px 0 0 -450px;
     background: white;
     z-index: 999;
 }
@@ -404,14 +404,16 @@ body {
 }
 
 .choose-trip h3 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
 }
 
 .select-aria {
     display: flex;
+    max-width: 600px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 60px;
+    margin-left: 130px;
+    margin-bottom: 40px;
 }
 
 .select-aria .select-item {
@@ -422,17 +424,30 @@ body {
     margin: 10px;
     border: 1px solid black;
     border-radius: 7px;
+    transition: all 0.3s ease-in;
+}
+
+.select-aria .select-item:hover {
+    border-color: white;
+    color: white;
+    background: #dc3545;
+}
+
+
+.select-aria .red-color {
+    background: #dc3545;
+    border-color: white;
+    color: white;
+}
+
+.slide-trips img{
+    margin-bottom: 12px;
+    margin-left: 4px;
+    margin-right: 4px;
 }
 
 .slide-trips {
-    margin-bottom: 50px;
-}
-
-.slide-trips .as {
-    background: grey;
-    width: 170px;
-    height: 130px;
-    margin: 0 15px;
+    margin-bottom: 30px;
 }
 
 @media screen and (max-width: 1000px) {

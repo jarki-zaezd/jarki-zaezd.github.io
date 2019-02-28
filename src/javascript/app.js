@@ -32,7 +32,6 @@ function getDays() {
     for (let i = 0; i < daysNextMonth.length; i++) {
         $thList.push("<th style='background: #edeff1;'> <div class='date'>" + daysNextMonth[i] + "</div></th>");
     }
-    console.log($thList);
     return $thList;
 }
 
@@ -124,10 +123,43 @@ function changeDate(e) {
     e.preventDefault();
 }
 
-$('th').click(function () {
-    $('.choose-trip').css('visibility', 'visible');
+function addEvent() {
+    $('tbody th').click(function () {
+        $('.choose-trip').css('visibility', 'visible');
 
-    $('.choose-trip').addClass('animated delay-0.1s fadeInRight');
+        $('.choose-trip').addClass('animated delay-0.1s fadeInUp');
 
-    $('body').append('<div class="overplay"></div>');
+        $('body').append('<div class="overplay"></div>');
+    });
+}
+
+function tableObserver() {
+    let target = document.querySelector("table");
+    console.log(target);
+    const mutationConfig = {
+        childList: true,
+        subtree: true
+    }
+
+    const observer = new MutationObserver(addEvent);
+
+    observer.observe(target, mutationConfig);
+}
+
+$('.select-item').click(function (e) {
+    $.each($('.select-item'), function (indexInArray, valueOfElement) {
+        if ($(this).hasClass('red-color')) $(this).removeClass('red-color');
+    });
+    $(this).addClass('red-color');
+    e.preventDefault();
 });
+
+
+
+
+
+
+addEvent();
+tableObserver();
+
+
