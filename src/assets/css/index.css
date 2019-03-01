@@ -433,21 +433,59 @@ body {
     background: #dc3545;
 }
 
-
 .select-aria .red-color {
     background: #dc3545;
     border-color: white;
     color: white;
 }
 
-.slide-trips img{
-    margin-bottom: 12px;
-    margin-left: 4px;
-    margin-right: 4px;
+.slide-trips {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
-.slide-trips {
-    margin-bottom: 30px;
+.slide-trips .slide {
+    position: relative;
+    width: 160px;
+    height: 120px;
+    margin: 8px 6px;
+    background: url('../images/gallery-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-trips i {
+    color: black;
+    background: white;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -20px 0 0 -20px;
+    border-radius: 50%;
+}
+
+.slide-trips .back-overplay {
+    background: rgba(224, 53, 53, 0.812);
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    transition: all 0.2s ease;
+    z-index: 999;
+}
+
+.slide-trips .back-overplay:hover{
+    opacity: 1;
+}
+
+.slide-trips i::before {
+    position: absolute;
+    top: 12px;
+    right: 12px;
 }
 
 @media screen and (max-width: 1000px) {
