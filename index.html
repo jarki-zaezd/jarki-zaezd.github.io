@@ -179,7 +179,6 @@
         </div>
         </div>
     </section>
-
     <section id="sec-3">
         <div class="calendar">
             <div class="calendar-info">
@@ -216,31 +215,73 @@
         <div class="choose-trip">
             <h3>Click on type and choose trip</h3>
             <div class="select-aria">
-                <a class="select-item" href="#">Pussy trip</a>
-                <a class="select-item" href="#">Savage trip</a>
-                <a class="select-item" href="#">Try escape trip</a>
-                <a class="select-item" href="#">Train trip</a>
-                <a class="select-item" href="#">No road trip</a>
-                <a class="select-item" href="#">Speed hack trip</a>
+                <a class="select-item" href="#" data-filter='.trip-3'>Pussy trip</a>
+                <a class="select-item" href="#" data-filter='.trip-3'>Savage trip</a>
+                <a class="select-item" href="#" data-filter='.trip-3'>Try escape trip</a>
+                <a class="select-item" href="#" data-filter='.trip-3'>Train trip</a>
+                <a class="select-item" href="#" data-filter='.trip-2'>No road trip</a>
+                <a class="select-item" href="#" data-filter='.trip-1'>Speed hack trip</a>
             </div>
             <div class="slide-trips">
-                <img src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
-                <img src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
-                <img src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
-                <img src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
-                <img src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
-                <img src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
-                <img src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
-                <img src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
-                <img src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
-                <img src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
+                <img class="slide trip-1" src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
+                <img class="slide trip-1" src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
+                <img class="slide trip-1" src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
+                <img class="slide trip-1" src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
+                <img class="slide trip-1" src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
+                <img class="slide trip-1" src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
+                <img class="slide trip-3" src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
+                <img class="slide trip-3" src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
+                <img class="slide trip-2" src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
+                <img class="slide trip-2" src="src/assets/images/gallery-1.jpg" alt="" style="width: 160px; height: 120px;">
             </div>
-            <a href="" class="btn btn-danger">Start rolling now</a>
+        </div>
+
+        <a href="" class="btn btn-danger">Start rolling now</a>
         </div>
     </section>
     <script src="src/javascript/jquery-3.3.1.min.js"></script>
     <script src="./dist/main.js"></script>
     <script src="./src/javascript/app.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script>
+        $(document).ready(function ($) {
+
+            if ($('.slide-trips').length > 0) {
+
+                var $container = $('.slide-trips'),
+                    $imgs = $('.slide img');
+
+
+                $('.select-item').click(function () {
+
+                    var $this = $(this), filterValue = $this.attr('data-filter');
+
+                    $container.isotope({
+                        filter: filterValue,
+                        animationOptions: {
+                            duration: 750,
+                            easing: 'linear',
+                            queue: false,
+                        }
+                    });
+
+                    // don't proceed if already selected 
+
+                    if ($this.hasClass('selected')) {
+                        return false;
+                    }
+
+                    var filter_wrapper = $this.closest('.filter-wrapper');
+                    filter_wrapper.find('.selected').removeClass('selected');
+                    $this.addClass('selected');
+
+                    return false;
+                });
+
+            }
+
+        });
+    </script>
 </body>
 
 </html>
