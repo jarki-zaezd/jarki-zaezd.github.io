@@ -443,6 +443,7 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 24px;
 }
 
 .slide-trips .slide {
@@ -468,7 +469,7 @@ body {
 }
 
 .slide-trips .back-overplay {
-    background: rgba(224, 53, 53, 0.812);
+    background: rgba(245, 36, 36, 0.85);
     opacity: 0;
     height: 100%;
     width: 100%;
@@ -487,6 +488,9 @@ body {
     top: 12px;
     right: 12px;
 }
+
+
+
 
 @media screen and (max-width: 1000px) {
     .container {
