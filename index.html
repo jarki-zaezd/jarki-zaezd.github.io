@@ -33,6 +33,7 @@
     <script>
         new WOW().init();
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <link href="src/assets/css/index.css" rel="stylesheet">
 </head>
 
@@ -269,6 +270,12 @@
             <a href="" class="btn btn-danger">Start rolling now</a>
         </div>
         </div>
+    </section>
+    <section id="stats">
+        <canvas id="time"></canvas>
+        <canvas id="trip-difficulty"></canvas>
+        <canvas id="trip-all-way"></canvas>
+        <canvas id="trip-activity"></canvas>
     </section>
     <script src="src/javascript/jquery-3.3.1.min.js"></script>
     <script src="./dist/main.js"></script>
