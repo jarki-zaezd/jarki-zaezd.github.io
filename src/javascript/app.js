@@ -135,7 +135,6 @@ function addEvent() {
 
 function tableObserver() {
     let target = document.querySelector("table");
-    console.log(target);
     const mutationConfig = {
         childList: true,
         subtree: true
@@ -169,6 +168,7 @@ var myPieChart = new Chart(ctx, {
     type: 'bar',
     data: {
         datasets: [{
+            label: "Time spend",
             data: [
                 randomScalingFactor(),
                 randomScalingFactor(),
@@ -210,7 +210,12 @@ var myPieChart = new Chart(ctx, {
                     color: "#FFFFFF"
                 },
                 ticks: {
-                    fontColor: "white"
+                    min: 0,
+                    stepSize: 20,
+                    fontColor: "white",
+                    callback: function (label, index, labels) {
+                        return label + ' hours';
+                    }
                 }
             }],
             xAxes: [{
@@ -231,6 +236,7 @@ var myPieChart2 = new Chart(ctx2, {
     type: 'bar',
     data: {
         datasets: [{
+            label: "Difficulty",
             data: [
                 randomScalingFactor() * 100,
                 randomScalingFactor() * 100,
@@ -272,6 +278,8 @@ var myPieChart2 = new Chart(ctx2, {
                     color: "#FFFFFF"
                 },
                 ticks: {
+                    min: 0,
+                    stepSize: 2000,
                     fontColor: "white"
                 }
             }],
@@ -293,13 +301,14 @@ var myPieChart3 = new Chart(ctx3, {
     type: 'bar',
     data: {
         datasets: [{
+            label: "Mile count",
             data: [
-                randomScalingFactor() * 194,
-                randomScalingFactor() * 194,
-                randomScalingFactor() * 194,
-                randomScalingFactor() * 194,
-                randomScalingFactor() * 194,
-                randomScalingFactor() * 194
+                randomScalingFactor() * 30,
+                randomScalingFactor() * 30,
+                randomScalingFactor() * 30,
+                randomScalingFactor() * 30,
+                randomScalingFactor() * 30,
+                randomScalingFactor() * 30
             ],
             backgroundColor: [
                 'rgb(245, 207, 143)',
@@ -334,7 +343,12 @@ var myPieChart3 = new Chart(ctx3, {
                     color: "#FFFFFF"
                 },
                 ticks: {
-                    fontColor: "white"
+                    min: 0,
+                    stepSize: 700,
+                    fontColor: "white",
+                    callback: function (label, index, labels) {
+                        return label + ' mile';
+                    }
                 }
             }],
             xAxes: [{
@@ -343,6 +357,7 @@ var myPieChart3 = new Chart(ctx3, {
                     color: "#FFFFFF"
                 },
                 ticks: {
+
                     fontColor: "white"
                 }
             }]
@@ -356,21 +371,22 @@ var myPieChart4 = new Chart(ctx4, {
     data: {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
         datasets: [{
+            label: "Trip activity",
             backgroundColor: "rgb(66, 72, 235)",
             borderColor: "rgb(66, 72, 235)",
             data: [
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor(),
-                randomScalingFactor()
+                randomScalingFactor() + 150,
+                randomScalingFactor() + 150,
+                randomScalingFactor() + 150,
+                randomScalingFactor() + 150,
+                randomScalingFactor() + 150,
+                randomScalingFactor() + 150,
+                randomScalingFactor() + 150,
+                randomScalingFactor() + 150,
+                randomScalingFactor() + 150,
+                randomScalingFactor() + 150,
+                randomScalingFactor() + 150,
+                randomScalingFactor() + 150
             ],
             fill: false
         }],
@@ -390,6 +406,7 @@ var myPieChart4 = new Chart(ctx4, {
                     color: "#FFFFFF"
                 },
                 ticks: {
+                    stepSize: 30,
                     fontColor: "white"
                 }
             }],
