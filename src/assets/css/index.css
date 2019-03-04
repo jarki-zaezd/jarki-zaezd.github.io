@@ -67,7 +67,7 @@ body {
     padding-right: 20px;
 }
 
-#sec-1 {
+#home {
     position: relative;
     top: 0;
     left: 0;
@@ -79,13 +79,13 @@ body {
     background-repeat: no-repeat;
 }
 
-#sec-1 .info {
+#home .info {
     font-family: 'Open Sans', sans-serif;
     text-align: center;
     margin-top: 23%;
 }
 
-#sec-1 .info h2 {
+#home .info h2 {
     font-size: 42px;
     font-weight: 400;
     letter-spacing: 1.6px;
@@ -93,13 +93,13 @@ body {
     margin-bottom: 30px;
 }
 
-#sec-1 .info p {
+#home .info p {
     letter-spacing: 1px;
     color: rgb(226, 226, 226);
     margin-bottom: 40px;
 }
 
-#sec-1 .info a {
+#home .info a {
     font-size: 20px;
     color: white;
     background: rgb(68, 112, 68);
@@ -107,11 +107,11 @@ body {
     padding-right: 24px;
 }
 
-#sec-1 .info a:hover {
+#home .info a:hover {
     background: rgb(99, 172, 99);
 }
 
-#sec-1 .info a:focus {
+#home .info a:focus {
     box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, .5);
 }
 
@@ -248,7 +248,7 @@ body {
     float: right;
 }
 
-#sec-3 {
+#calendar {
     position: relative;
     min-height: 100vh !important;
 }

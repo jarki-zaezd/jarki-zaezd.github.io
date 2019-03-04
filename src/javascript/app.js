@@ -153,6 +153,16 @@ $('.select-item').click(function (e) {
     e.preventDefault();
 });
 
+$('.nav-link').click(function () {
+    let sectionID = $(this).attr('href').slice(1);
+    let top = $(document.getElementById(sectionID)).offset().top;
+    $("html, body").stop().animate({ scrollTop: top - 120 }, 2000, function () {
+        console.log('success');
+    })
+})
+
+
+
 
 
 addEvent();
