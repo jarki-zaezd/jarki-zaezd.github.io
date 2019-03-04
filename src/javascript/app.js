@@ -156,10 +156,107 @@ $('.select-item').click(function (e) {
 
 
 
-
-
-
 addEvent();
 tableObserver();
 
+
+let ctx = document.getElementById('time').getContext('2d');
+var myPieChart = new Chart(ctx, {
+    type: 'pie',
+    data: {
+        datasets: [{
+            label: "My First dataset",
+            
+            data: [10, 5, 2, 20, 30, 45],
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 206, 86)',
+                'rgb(75, 192, 192)',
+                'rgb(153, 102, 255)',
+                'rgb(255, 159, 64)'
+            ]
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+        responsive: true
+    }
+});
+
+let ctx2 = document.getElementById('trip-difficulty').getContext('2d');
+var myPieChart2 = new Chart(ctx2, {
+    type: 'pie',
+    data: {
+        datasets: [{
+            label: "My First dataset",
+            
+            data: [10, 5, 2, 20, 30, 45],
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 206, 86)',
+                'rgb(75, 192, 192)',
+                'rgb(153, 102, 255)',
+                'rgb(255, 159, 64)'
+            ]
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+        responsive: true
+    }
+});
+
+let ctx3 = document.getElementById('trip-all-way').getContext('2d');
+var myPieChart3 = new Chart(ctx3, {
+    type: 'pie',
+    data: {
+        datasets: [{
+            label: "My First dataset",
+            
+            data: [10, 5, 2, 20, 30, 45],
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 206, 86)',
+                'rgb(75, 192, 192)',
+                'rgb(153, 102, 255)',
+                'rgb(255, 159, 64)'
+            ]
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+        responsive: true
+    }
+});
+
+let ctx4 = document.getElementById('trip-activity').getContext('2d');
+var myPieChart4 = new Chart(ctx4, {
+    type: 'pie',
+    data: {
+        datasets: [{
+            label: "My First dataset",
+            
+            data: [10, 5, 2, 20, 30, 45],
+            backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 206, 86)',
+                'rgb(75, 192, 192)',
+                'rgb(153, 102, 255)',
+                'rgb(255, 159, 64)'
+            ]
+        }]
+    },
+
+    // Configuration options go here
+    options: {
+        responsive: true
+    }
+});
 
