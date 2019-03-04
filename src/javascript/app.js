@@ -159,104 +159,250 @@ $('.select-item').click(function (e) {
 addEvent();
 tableObserver();
 
+var randomScalingFactor = function () {
+    return Math.round(Math.random() * 100);
+};
+
 
 let ctx = document.getElementById('time').getContext('2d');
 var myPieChart = new Chart(ctx, {
-    type: 'pie',
+    type: 'bar',
     data: {
         datasets: [{
-            label: "My First dataset",
-            
-            data: [10, 5, 2, 20, 30, 45],
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ],
             backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(54, 162, 235)',
-                'rgb(255, 206, 86)',
-                'rgb(75, 192, 192)',
-                'rgb(153, 102, 255)',
-                'rgb(255, 159, 64)'
+                'rgb(183, 255, 181)',
+                'rgb(183, 255, 181)',
+                'rgb(183, 255, 181)',
+                'rgb(183, 255, 181)',
+                'rgb(183, 255, 181)',
+                'rgb(183, 255, 181)'
             ]
-        }]
+        }],
+        labels: [
+            "Pussy trip",
+            "Savage trip",
+            "Try escape trip",
+            "Train trip",
+            "No road trip",
+            "Speed hack trip"
+        ]
     },
 
-    // Configuration options go here
     options: {
-        responsive: true
+        responsive: true,
+        legend: {
+            labels: {
+                fontColor: 'rgb(255, 255, 255)'
+            }
+        },
+        scales: {
+            yAxes: [{
+                display: true,
+                gridLines: {
+                    color: "#FFFFFF"
+                },
+                ticks: {
+                    fontColor: "white"
+                }
+            }],
+            xAxes: [{
+                gridLines: {
+                    display: false,
+                    color: "#FFFFFF"
+                },
+                ticks: {
+                    fontColor: "white"
+                }
+            }]
+        }
     }
 });
 
 let ctx2 = document.getElementById('trip-difficulty').getContext('2d');
 var myPieChart2 = new Chart(ctx2, {
-    type: 'pie',
+    type: 'bar',
     data: {
         datasets: [{
-            label: "My First dataset",
-            
-            data: [10, 5, 2, 20, 30, 45],
+            data: [
+                randomScalingFactor() * 100,
+                randomScalingFactor() * 100,
+                randomScalingFactor() * 100,
+                randomScalingFactor() * 100,
+                randomScalingFactor() * 100,
+                randomScalingFactor() * 100
+            ],
             backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(54, 162, 235)',
-                'rgb(255, 206, 86)',
-                'rgb(75, 192, 192)',
-                'rgb(153, 102, 255)',
-                'rgb(255, 159, 64)'
+                'rgb(136, 189, 243)',
+                'rgb(136, 189, 243)',
+                'rgb(136, 189, 243)',
+                'rgb(136, 189, 243)',
+                'rgb(136, 189, 243)',
+                'rgb(136, 189, 243)'
             ]
-        }]
+        }],
+        labels: [
+            "Pussy trip",
+            "Savage trip",
+            "Try escape trip",
+            "Train trip",
+            "No road trip",
+            "Speed hack trip"
+        ]
     },
 
-    // Configuration options go here
     options: {
-        responsive: true
+        responsive: true,
+        legend: {
+            labels: {
+                fontColor: 'rgb(255, 255, 255)'
+            }
+        },
+        scales: {
+            yAxes: [{
+                display: true,
+                gridLines: {
+                    color: "#FFFFFF"
+                },
+                ticks: {
+                    fontColor: "white"
+                }
+            }],
+            xAxes: [{
+                gridLines: {
+                    display: false,
+                    color: "#FFFFFF"
+                },
+                ticks: {
+                    fontColor: "white"
+                }
+            }]
+        }
     }
 });
 
 let ctx3 = document.getElementById('trip-all-way').getContext('2d');
 var myPieChart3 = new Chart(ctx3, {
-    type: 'pie',
+    type: 'bar',
     data: {
         datasets: [{
-            label: "My First dataset",
-            
-            data: [10, 5, 2, 20, 30, 45],
+            data: [
+                randomScalingFactor() * 194,
+                randomScalingFactor() * 194,
+                randomScalingFactor() * 194,
+                randomScalingFactor() * 194,
+                randomScalingFactor() * 194,
+                randomScalingFactor() * 194
+            ],
             backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(54, 162, 235)',
-                'rgb(255, 206, 86)',
-                'rgb(75, 192, 192)',
-                'rgb(153, 102, 255)',
-                'rgb(255, 159, 64)'
+                'rgb(245, 207, 143)',
+                'rgb(245, 207, 143)',
+                'rgb(245, 207, 143)',
+                'rgb(245, 207, 143)',
+                'rgb(245, 207, 143)',
+                'rgb(245, 207, 143)'
             ]
-        }]
+        }],
+        labels: [
+            "Pussy trip",
+            "Savage trip",
+            "Try escape trip",
+            "Train trip",
+            "No road trip",
+            "Speed hack trip"
+        ]
     },
 
-    // Configuration options go here
     options: {
-        responsive: true
+        responsive: true,
+        legend: {
+            labels: {
+                fontColor: 'rgb(255, 255, 255)'
+            }
+        },
+        scales: {
+            yAxes: [{
+                display: true,
+                gridLines: {
+                    color: "#FFFFFF"
+                },
+                ticks: {
+                    fontColor: "white"
+                }
+            }],
+            xAxes: [{
+                gridLines: {
+                    display: false,
+                    color: "#FFFFFF"
+                },
+                ticks: {
+                    fontColor: "white"
+                }
+            }]
+        }
     }
 });
 
 let ctx4 = document.getElementById('trip-activity').getContext('2d');
 var myPieChart4 = new Chart(ctx4, {
-    type: 'pie',
+    type: 'line',
     data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
         datasets: [{
-            label: "My First dataset",
-            
-            data: [10, 5, 2, 20, 30, 45],
-            backgroundColor: [
-                'rgb(255, 99, 132)',
-                'rgb(54, 162, 235)',
-                'rgb(255, 206, 86)',
-                'rgb(75, 192, 192)',
-                'rgb(153, 102, 255)',
-                'rgb(255, 159, 64)'
-            ]
-        }]
+            backgroundColor: "rgb(66, 72, 235)",
+            borderColor: "rgb(66, 72, 235)",
+            data: [
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor(),
+                randomScalingFactor()
+            ],
+            fill: false
+        }],
     },
 
-    // Configuration options go here
     options: {
-        responsive: true
+        responsive: true,
+        legend: {
+            labels: {
+                fontColor: 'rgb(255, 255, 255)'
+            }
+        },
+        scales: {
+            yAxes: [{
+                display: true,
+                gridLines: {
+                    color: "#FFFFFF"
+                },
+                ticks: {
+                    fontColor: "white"
+                }
+            }],
+            xAxes: [{
+                gridLines: {
+                    display: false,
+                    color: "#FFFFFF"
+                },
+                ticks: {
+                    fontColor: "white"
+                }
+            }]
+        }
     }
 });
 
