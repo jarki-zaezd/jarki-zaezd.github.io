@@ -327,45 +327,7 @@
     <script src="./dist/main.js"></script>
     <script src="./src/javascript/app.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-    <script>
-        $(document).ready(function ($) {
-
-            if ($('.slide-trips').length > 0) {
-
-                var $container = $('.slide-trips'),
-                    $imgs = $('.slide img');
-
-
-                $('.select-item').click(function () {
-
-                    var $this = $(this), filterValue = $this.attr('data-filter');
-
-                    $container.isotope({
-                        filter: filterValue,
-                        animationOptions: {
-                            duration: 750,
-                            easing: 'linear',
-                            queue: false,
-                        }
-                    });
-
-                    // don't proceed if already selected 
-
-                    if ($this.hasClass('selected')) {
-                        return false;
-                    }
-
-                    var filter_wrapper = $this.closest('.filter-wrapper');
-                    filter_wrapper.find('.selected').removeClass('selected');
-                    $this.addClass('selected');
-
-                    return false;
-                });
-
-            }
-
-        });
-    </script>
+    <script src="src/javascript/gallery.js"></script>
     <script src="src/javascript/graph.js"></script>
 </body>
 
