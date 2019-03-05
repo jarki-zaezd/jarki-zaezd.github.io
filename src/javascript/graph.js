@@ -243,3 +243,31 @@ var seasonGraph = new Chart(ctxForSeasonCharter, {
     }
 });
 
+function generateAriaLabels(keys, values) {
+    let result = {};
+    keys.forEach((key, index) => {
+        result[key] = values[index];
+    });
+
+    let ariaStr = '';
+    for (const key in result) {
+        ariaStr += `${key}: ${result[key]}, `
+    }
+    ariaStr = ariaStr.substr(0, ariaStr.length - 2);
+    return ariaStr;
+}
+
+const timeCharter= document.getElementById('time');
+const difficultyCharter= document.getElementById('trip-difficulty');
+const mileCountCharter= document.getElementById('trip-all-way');
+const seasonCharter= document.getElementById('trip-activity');
+
+const timeStat = generateAriaLabels(TRIP_LABELS, DATA_FOR_TIME_GRAPH);
+const difficultyStat = generateAriaLabels(TRIP_LABELS, DATA_FOR_DIFFICULTY_GRAPH);
+const mileStat = generateAriaLabels(TRIP_LABELS, DATA_FOR_MILE_COUNT_GRAPH);
+const activityStat = generateAriaLabels(MONTH_LIST, DATA_FOR_SEASON_GRAPH);
+
+timeCharter.setAttribute("aria-label", "Hours spent in trip from 0 to 120: " + timeStat);
+difficultyCharter.setAttribute("aria-label", "How many times from 0 to 12000: " + difficultyStat);
+mileCountCharter.setAttribute("aria-label", "How many miles from 0 to 3500: " + mileStat);
+seasonCharter.setAttribute("aria-label", "Seosonal activity from 0 to 280: " + activityStat);
