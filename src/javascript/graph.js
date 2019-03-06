@@ -243,18 +243,18 @@ var seasonGraph = new Chart(ctxForSeasonCharter, {
     }
 });
 
-function generateAriaLabels(keys, values) {
-    let result = {};
-    keys.forEach((key, index) => {
-        result[key] = values[index];
+function generateAriaLabels(labels, data) {
+    let charterData = {};
+    labels.forEach((label, index) => {
+        charterData[label] = data[index];
     });
 
-    let ariaStr = '';
-    for (const key in result) {
-        ariaStr += `${key}: ${result[key]}, `
+    let ariaLabelContent = '';
+    for (const key in charterData) {
+        ariaLabelContent += `${key}: ${charterData[key]}, `
     }
-    ariaStr = ariaStr.substr(0, ariaStr.length - 2);
-    return ariaStr;
+    ariaLabelContent = ariaLabelContent.substr(0, ariaLabelContent.length - 2);
+    return ariaLabelContent;
 }
 
 const timeCharter= document.getElementById('time');
