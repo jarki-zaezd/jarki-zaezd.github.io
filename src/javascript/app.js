@@ -8,7 +8,7 @@ class Table {
     }
 
     setPrevAndNextMonthToTableNav() {
-        let month = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        let month = MONTH_LIST;
         let dateInfo = document.querySelector('.calendar-nav h4').textContent,
             currentMonth = dateInfo.substr(0, dateInfo.indexOf(' ')),
             numberMonth = month.indexOf(currentMonth),
