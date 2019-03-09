@@ -160,7 +160,7 @@ $('.select-item').click(function (e) {
 $('.nav-link').click(function () {
     let sectionID = $(this).attr('href').slice(1);
     let top = $(document.getElementById(sectionID)).offset().top;
-    $("html, body").stop().animate({ scrollTop: top - 49 }, 2000, function () {
+    $("html, body").stop().animate({ scrollTop: top - 57 }, 2000, function () {
         console.log('success');
     })
 })
