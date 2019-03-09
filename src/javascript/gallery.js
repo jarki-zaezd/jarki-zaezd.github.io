@@ -1,10 +1,14 @@
 $(document).ready(function ($) {
 
+
+
     if ($('.slide-trips').length > 0) {
 
-        var $container = $('.slide-trips'),
-            $imgs = $('.slide img');
-
+        var $container = $('.slide-trips');
+        //default init isotop
+        $container.isotope({
+            filter: '.trip-1',
+        });
 
         $('.select-item').click(function () {
 
