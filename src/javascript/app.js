@@ -162,7 +162,15 @@ $('.nav-link').click(function () {
     let top = $(document.getElementById(sectionID)).offset().top;
     $("html, body").stop().animate({ scrollTop: top - 57 }, 2000, function () {
         console.log('success');
-    })
+    });
+
+    let items = Array.from(document.querySelectorAll('.nav-item'));
+
+    items.forEach(item => {
+        if (item.classList.contains('active')) item.className = 'nav-item';
+    });
+
+    $(this).parent().addClass('active');
 })
 
 
