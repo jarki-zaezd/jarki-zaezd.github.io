@@ -492,7 +492,7 @@ body {
 #stats {
     position: relative;
     min-height: 75vh !important;
-    background: rgb(250, 250, 250);
+    background: rgb(255, 255, 255);
     text-align: center;
 }
 
