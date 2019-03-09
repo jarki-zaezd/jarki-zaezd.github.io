@@ -34,28 +34,6 @@ body {
     margin-top: -4px;
 }
 
-.dropdown-menu {
-    padding: 0;
-    width: 300px;
-}
-
-.dropdown-divider {
-    padding: 0;
-    margin: 0;
-}
-
-.dropdown-menu i {
-    font-size: 25px;
-    color: #333;
-    float: right;
-}
-
-.dropdown-item {
-    color: #333;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
 .nav-item {
     margin-left: 5px;
 }
