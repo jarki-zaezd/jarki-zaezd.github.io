@@ -411,7 +411,7 @@ body {
     margin-bottom: 20px;
 }
 
-#calendar .choose-trip i {
+#calendar .choose-trip .fa-times {
     position: absolute;
     right: 0px;
     top: 0px;
