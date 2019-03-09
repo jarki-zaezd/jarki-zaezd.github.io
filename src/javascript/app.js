@@ -129,6 +129,8 @@ function addEvent() {
     $('tbody th').click(function () {
         $('.choose-trip').css('visibility', 'visible');
 
+        $('.choose-trip').removeClass('animated delay-0.1s fadeOut');
+
         $('.choose-trip').addClass('animated delay-0.1s fadeInUp');
 
         $('body').append('<div class="overplay"></div>');
@@ -169,3 +171,22 @@ $('.nav-link').click(function () {
 
 addEvent();
 tableObserver();
+
+
+
+document.addEventListener('keydown', function (e) {
+    if (e.which !== 27) return;
+
+    let state = $('.choose-trip').css('visibility');
+
+    if (state === 'visible') {
+        $('.choose-trip').removeClass('animated delay-0.1s fadeInUp');
+
+        $('.choose-trip').addClass('animated delay-0.1s fadeOut');
+
+        setTimeout(function () {
+            $('.choose-trip').css('visibility', 'hidden');
+            $('.overplay').remove();
+        }, 1000);
+    }
+});
