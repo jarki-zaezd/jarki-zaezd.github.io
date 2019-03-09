@@ -554,6 +554,11 @@ body {
     line-height: 1.5;
 }
 
+footer a {
+    color: rgb(168, 168, 168) !important;
+    margin-left: 3px;
+}
+
 @media screen and (max-width: 1000px) {
     .container {
         max-width: 760px;
