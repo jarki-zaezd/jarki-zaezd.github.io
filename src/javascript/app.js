@@ -172,7 +172,18 @@ $('.nav-link').click(function () {
 addEvent();
 tableObserver();
 
+let closeIcon = document.querySelector('#calendar .choose-trip i');
 
+closeIcon.addEventListener('click', function (e) {
+    $('.choose-trip').removeClass('animated delay-0.1s fadeInUp');
+
+    $('.choose-trip').addClass('animated delay-0.1s fadeOut');
+
+    setTimeout(function () {
+        $('.choose-trip').css('visibility', 'hidden');
+        $('.overplay').remove();
+    }, 1000);
+});
 
 document.addEventListener('keydown', function (e) {
     if (e.which !== 27) return;
