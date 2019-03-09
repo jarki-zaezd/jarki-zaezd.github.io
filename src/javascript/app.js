@@ -176,12 +176,23 @@ $('.nav-link').click(function () {
 $('#home a').click(function () {
     let sectionID = $(this).attr('href').slice(1);
     let top = $(document.getElementById(sectionID)).offset().top;
-    
+
     $("html, body").stop().animate({ scrollTop: top - 57 }, 1000, function () {
         console.log('success');
     });
 });
 
+$('#calendar .calendar .btn').click(function (e) {
+    $('.choose-trip').css('visibility', 'visible');
+
+    $('.choose-trip').removeClass('animated delay-0.1s fadeOut');
+
+    $('.choose-trip').addClass('animated delay-0.1s fadeInUp');
+
+    $('body').append('<div class="overplay"></div>');
+
+    e.preventDefault();
+});
 
 
 
@@ -195,6 +206,7 @@ closeIcon.addEventListener('click', function (e) {
     $('.choose-trip').removeClass('animated delay-0.1s fadeInUp');
 
     $('.choose-trip').addClass('animated delay-0.1s fadeOut');
+    $('.overplay').css('opacity', 0);
 
     setTimeout(function () {
         $('.choose-trip').css('visibility', 'hidden');
@@ -211,6 +223,7 @@ document.addEventListener('keydown', function (e) {
         $('.choose-trip').removeClass('animated delay-0.1s fadeInUp');
 
         $('.choose-trip').addClass('animated delay-0.1s fadeOut');
+        $('.overplay').css('opacity', 0);
 
         setTimeout(function () {
             $('.choose-trip').css('visibility', 'hidden');
