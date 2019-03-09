@@ -127,7 +127,6 @@ body {
 
 #trips .container {
     padding-top: 70px;
-    margin-bottom: 70px;
 }
 
 #trips header h2 {
@@ -255,6 +254,7 @@ body {
 #calendar {
     position: relative;
     min-height: 100vh !important;
+    margin-top: 70px;
 }
 
 #calendar .calendar {
