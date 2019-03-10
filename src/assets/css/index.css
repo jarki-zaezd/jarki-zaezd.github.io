@@ -560,6 +560,12 @@ footer a {
     margin-left: 3px;
 }
 
+nav .trips-info h3 {
+    font-size: 17px;
+    letter-spacing: 0.8px;
+    margin-top: 10px;
+}
+
 @media screen and (max-width: 1000px) {
     .container {
         max-width: 760px;
