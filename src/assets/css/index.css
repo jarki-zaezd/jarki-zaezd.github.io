@@ -9,6 +9,7 @@ body {
     -webkit-box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.33);
     -moz-box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.33);
     box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.33);
+    z-index: 999;
 }
 
 .navbar-brand {
@@ -561,6 +562,7 @@ footer a {
 }
 
 nav .trips-info h3 {
+    color: #ddd;
     font-size: 17px;
     letter-spacing: 0.8px;
     margin-top: 10px;
