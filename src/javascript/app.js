@@ -231,3 +231,10 @@ document.addEventListener('keydown', function (e) {
         }, 1000);
     }
 });
+
+
+let itemCard = document.querySelector('#trips .card');
+
+itemCard.addEventListener('click', function () {
+    window.location.href = 'trips.html';
+});
