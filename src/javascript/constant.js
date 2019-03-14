@@ -54,3 +54,20 @@ const COLORS_FOR_TIME_GRAPH = [GREEN, GREEN, GREEN, GREEN, GREEN, GREEN];
 const COLORS_FOR_DIFFICULTY_GRAPH = [BLUE, BLUE, BLUE, BLUE, BLUE, BLUE];
 const COLORS_FOR_MILE_COUNT_GRAPH = [ORANGE, ORANGE, ORANGE, ORANGE, ORANGE, ORANGE];
 
+const WEATHER_HELPER = {
+    "Пасмурно, осадки": "wi-day-rain-wind",
+    "Пасмурно": "wi-cloud",
+    "Облачно, небольшой дождь": "wi-hail",
+    "Облачно": "wi-cloudy",
+    "Пасмурно, дождь": "wi-hail",
+    "Переменная облачность, небольшой дождь": "wi-rain",
+    "Пасмурно, небольшой дождь": "wi-rain",
+    "Переменная облачность, небольшой снег": "wi-snow",
+    "Переменная облачность": "wi-cloudy",
+    "Облачно, дождь": "wi-rain",
+    "Малооблачно": "wi-cloud",
+    "Ясно": "wi-day-sunny",
+    "Малооблачно, небольшой дождь": "wi-rain",
+    "Малооблачно, дождь": "wi-rain"
+}
+
