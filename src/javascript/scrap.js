@@ -1,4 +1,4 @@
-$.getJSON('http://www.whateverorigin.org/get?url=' +
+$.getJSON('https://whateverorigin.herokuapp.com/get?url=' +
     encodeURIComponent('https://www.gismeteo.by/weather-minsk-4248/month/') + '&callback=?', function (data) {
         let weatherMaxData = $(data.contents).find('.temp_max.js_meas_container');
         let weatherMinData = $(data.contents).find('.temp_min.js_meas_container');
