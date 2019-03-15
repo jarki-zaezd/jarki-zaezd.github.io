@@ -8,8 +8,10 @@ $.getJSON('https://whateverorigin.herokuapp.com/get?url=' +
             $thList = $('tbody th');
 
         let monthDays = [...$monthDaysContainers].map(elem => elem.textContent.trim().slice(0, 2)),
-            maxTemperature = [...$maxTemperatureContainers].map(elem => elem.dataset.value),
-            minTemperature = [...$minTemperatureContainers].map(elem => elem.dataset.value),
+            maxTemperature = [...$maxTemperatureContainers]
+                .map(elem => elem.dataset.value > 0 ? ('+' + elem.dataset.value) : elem.dataset.value),
+            minTemperature = [...$minTemperatureContainers]
+                .map(elem => elem.dataset.value > 0 ? ('+' + elem.dataset.value) : elem.dataset.value),
             weatherStatus = [...$weatherStatusContainers].map(elem => elem.dataset.text);
 
         let fullCurrentDate = new Date(),
@@ -38,9 +40,13 @@ $.getJSON('https://whateverorigin.herokuapp.com/get?url=' +
 
         if (calendarTitle.includes(curMonth)) {
             for (let i = 0; i < weatherObjectsContainer.length; i++) {
-                $($thList[i + startFillPosition]).append("<p style = 'font-size: 26px'>" + weatherObjectsContainer[i].max + "</p>");
-                $($thList[i + startFillPosition]).append("<p>min: " + weatherObjectsContainer[i].min + "</p>");
-                $($thList[i + startFillPosition]).append("<i class=\"wi " + WEATHER_HELPER[weatherObjectsContainer[i].status] + "\" style = 'font-size: 26px'></i>");
+                let thContent =
+                    `<div class='fl-left'>
+                        <p style = 'font-size: 26px'> ${weatherObjectsContainer[i].max} </p>
+                        <i style='font-size: 38px' class="wi ${WEATHER_HELPER[weatherObjectsContainer[i].status]}"></i>
+                        <p>min: ${weatherObjectsContainer[i].min}  </p></div>`
+                $($thList[i + startFillPosition]).append(thContent);
+
             }
         }
 

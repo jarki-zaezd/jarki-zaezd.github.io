@@ -601,7 +601,7 @@ nav .trips-info h3 {
     transition: all 0.2s cubic-bezier(.25, .51, .46, 1.05);
 }
 
-#trips-container .trip-item:hover{
+#trips-container .trip-item:hover {
     transform: scale(1.07);
 }
 
@@ -652,14 +652,25 @@ nav .trips-info h3 {
     margin-bottom: 30px;
 }
 
-#trips-container .learn-more{
+#trips-container .learn-more {
     margin-left: 50%;
     transform: translateX(-50%)
 }
 
-tbody th p{
+tbody th p {
     padding: 0;
     margin: 0;
+}
+
+tbody th .fl-left {
+    position: relative;
+    text-align: end;
+}
+
+tbody th .fl-left i {
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 @media screen and (max-width: 1000px) {
