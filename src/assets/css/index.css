@@ -670,7 +670,7 @@ tbody th .fl-left {
 tbody th .fl-left i {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 20%;
 }
 
 @media screen and (max-width: 1000px) {

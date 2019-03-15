@@ -42,7 +42,7 @@ $.getJSON('https://whateverorigin.herokuapp.com/get?url=' +
             for (let i = 0; i < weatherObjectsContainer.length; i++) {
                 let thContent =
                     `<div class='fl-left'>
-                        <p style = 'font-size: 26px'> ${weatherObjectsContainer[i].max} </p>
+                        <p style = 'font-size: 26px; margin-bottom: 20px;'> ${weatherObjectsContainer[i].max} </p>
                         <i style='font-size: 38px' class="wi ${WEATHER_HELPER[weatherObjectsContainer[i].status]}"></i>
                         <p>min: ${weatherObjectsContainer[i].min}  </p></div>`
                 $($thList[i + startFillPosition]).append(thContent);
