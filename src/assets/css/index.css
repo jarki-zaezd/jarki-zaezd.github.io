@@ -657,6 +657,10 @@ nav .trips-info h3 {
     transform: translateX(-50%)
 }
 
+tbody th p{
+    padding: 0;
+    margin: 0;
+}
 
 @media screen and (max-width: 1000px) {
     .container {

@@ -1,76 +1,46 @@
 $.getJSON('https://whateverorigin.herokuapp.com/get?url=' +
     encodeURIComponent('https://www.gismeteo.by/weather-minsk-4248/month/') + '&callback=?', function (data) {
-        let weatherMaxData = $(data.contents).find('.temp_max.js_meas_container');
-        let weatherMinData = $(data.contents).find('.temp_min.js_meas_container');
-        let days = $(data.contents).find('.date');
-        let weatherStatus = $(data.contents).find('.tooltip.cell');
-        let daysNumbers = [], weatherMaxNumbers = [], weatherMinNumbers = [], weatherStat = [];
-        $.each(weatherStatus, function (index, value) {
-            weatherStat.push(value.dataset.text);
-        });
-        $.each(days, function (index, value) {
-            let tmp = value.textContent.trim().slice(0, 2);
-            daysNumbers.push(tmp);
-        });
-        $.each(weatherMinData, function (index, value) {
-            weatherMinNumbers.push(value.dataset.value);
-        });
-        $.each(weatherMaxData, function (index, value) {
-            weatherMaxNumbers.push(value.dataset.value);
-        });
-        let weatherIcon = [];
+        let $allPageData = $(data.contents),
+            $maxTemperatureContainers = $allPageData.find('.temp_max.js_meas_container'),
+            $minTemperatureContainers = $allPageData.find('.temp_min.js_meas_container'),
+            $monthDaysContainers = $allPageData.find('.date'),
+            $weatherStatusContainers = $(data.contents).find('.tooltip.cell'),
+            $thList = $('tbody th');
 
-        for (let i = 0; i < weatherStat.length; i++) {
-            let key = WEATHER_HELPER[weatherStat[i]];
-            if (key === undefined) key = 'skip';
+        let monthDays = [...$monthDaysContainers].map(elem => elem.textContent.trim().slice(0, 2)),
+            maxTemperature = [...$maxTemperatureContainers].map(elem => elem.dataset.value),
+            minTemperature = [...$minTemperatureContainers].map(elem => elem.dataset.value),
+            weatherStatus = [...$weatherStatusContainers].map(elem => elem.dataset.text);
 
-            weatherIcon.push(key);
+        let fullCurrentDate = new Date(),
+            monthNumber = fullCurrentDate.getMonth(),
+            len = minTemperature.length,
+            weatherObjectsContainer = [],
+            startFillPosition = 0;
 
-        }
-        class WeatherItem {
-            constructor(min, max, status, day) {
-                this.min = parseInt(min);
-                this.max = parseInt(max);
-                this.status = status;
-                this.day = parseInt(day);
-            }
-        }
-
-        let today = new Date();
-        let today2 = today.getDate();
-        let index = daysNumbers.indexOf(String(today2));
-
-        let weatherObjs = [];
-        for (let i = 0; i < weatherMinNumbers.length; i++) {
-            let tmp = new WeatherItem(weatherMinNumbers[i], weatherMaxNumbers[i], weatherStat[i], daysNumbers[i]);
+        for (let i = 0; i < len; i++) {
+            let tmp = new WeatherItem(minTemperature[i], maxTemperature[i], weatherStatus[i], monthDays[i]);
             if (tmp.status === undefined) continue;
-            weatherObjs.push(tmp);
+            weatherObjectsContainer.push(tmp);
         }
 
-        let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-        let numberMonths = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
-        let monthNumber = today.getMonth();
-
-        let $th = $('tbody th');
-        let savePoint = 0;
-
-        for (let i = 0; i < $th.length; i++) {
-            if (weatherObjs[0].day == $th[i].textContent) {
-                savePoint = i;
+        for (let i = 0; i < $thList.length; i++) {
+            let startFillDay = weatherObjectsContainer[0].day;
+            if (startFillDay == $thList[i].textContent) {
+                startFillPosition = i;
                 break;
             }
         }
 
-        let curMonth = months[Number(monthNumber)];
-        let nextMonth = months[Number(monthNumber) + 1]
-
-        let calendarTitle = $('.calendar-nav h4').text();
+        let curMonth = MONTH_LIST[Number(monthNumber)],
+            nextMonth = MONTH_LIST[Number(monthNumber) + 1],
+            calendarTitle = $('.calendar-nav h4').text();
 
         if (calendarTitle.includes(curMonth)) {
-            for (let i = 0; i < weatherObjs.length; i++) {
-                $($th[i + savePoint]).append("<p>" + weatherObjs[i].max + "</p>");
-                $($th[i + savePoint]).append("<p>" + weatherObjs[i].min + "</p>");
-                $($th[i + savePoint]).append("<i class=\"wi " + "wi-night-sleet" + "\"></i>");
+            for (let i = 0; i < weatherObjectsContainer.length; i++) {
+                $($thList[i + startFillPosition]).append("<p style = 'font-size: 26px'>" + weatherObjectsContainer[i].max + "</p>");
+                $($thList[i + startFillPosition]).append("<p>min: " + weatherObjectsContainer[i].min + "</p>");
+                $($thList[i + startFillPosition]).append("<i class=\"wi " + WEATHER_HELPER[weatherObjectsContainer[i].status] + "\" style = 'font-size: 26px'></i>");
             }
         }
 
