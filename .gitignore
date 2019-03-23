@@ -2,3 +2,5 @@ node_modules
 yarn.lock
 package-lock.json
 src/assets/.sass-cache/
+
+*.css.map
