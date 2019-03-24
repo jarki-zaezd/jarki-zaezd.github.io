@@ -3,4 +3,4 @@ yarn.lock
 package-lock.json
 src/assets/.sass-cache/
 
-*.css.map
+src/assets/css/index.css.map
