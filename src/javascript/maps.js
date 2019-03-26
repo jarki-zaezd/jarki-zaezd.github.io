@@ -82,7 +82,7 @@ function initMap() {
   map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 
   function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-    let points = [{ lat: 55.149097, lng: 27.552748 }];
+    let points = [{ lat: 55.094033, lng: 27.398867 }];
     var waypts = [];
     for (var i = 0; i < points.length; i++) {
       waypts.push({
@@ -93,8 +93,8 @@ function initMap() {
 
     directionsService.route(
       {
-        origin: { lat: 55.1401338, lng: 27.6717605 },
-        destination: { lat: 55.184259, lng: 27.59436 },
+        origin: { lat: 55.14947, lng: 27.377256 },
+        destination: { lat: 55.140125, lng: 27.672401 },
         waypoints: waypts,
         optimizeWaypoints: true,
         travelMode: "DRIVING"
@@ -119,30 +119,30 @@ function initMap() {
   }
   calculateAndDisplayRoute(directionsService, directionsDisplay);
 
-  directionsService2.route(
-    {
-      origin: { lat: 55.194671, lng: 27.634769 },
-      destination: { lat: 55.140116, lng: 27.672326 },
-      optimizeWaypoints: true,
-      travelMode: "DRIVING"
-    },
-    function(response, status) {
-      if (status === "OK") {
-        directionsDisplay2.setDirections(response);
-        var route = response.routes[0];
-        var summaryPanel = document.getElementsByClassName("totalDist")[0];
-        let allDistance = 0;
-        for (var i = 0; i < route.legs.length; i++) {
-          allDistance += parseInt(route.legs[i].distance.text);
-        }
-        summaryPanel.innerHTML += allDistance + "км";
-        bounds.union(response.routes[0].bounds);
-        map.fitBounds(bounds);
-      } else {
-        window.alert("Directions request failed due to " + status);
-      }
-    }
-  );
+  // directionsService2.route(
+  //   {
+  //     origin: { lat: 55.194671, lng: 27.634769 },
+  //     destination: { lat: 55.140116, lng: 27.672326 },
+  //     optimizeWaypoints: true,
+  //     travelMode: "DRIVING"
+  //   },
+  //   function(response, status) {
+  //     if (status === "OK") {
+  //       directionsDisplay2.setDirections(response);
+  //       var route = response.routes[0];
+  //       var summaryPanel = document.getElementsByClassName("totalDist")[0];
+  //       let allDistance = 0;
+  //       for (var i = 0; i < route.legs.length; i++) {
+  //         allDistance += parseInt(route.legs[i].distance.text);
+  //       }
+  //       summaryPanel.innerHTML += allDistance + "км";
+  //       bounds.union(response.routes[0].bounds);
+  //       map.fitBounds(bounds);
+  //     } else {
+  //       window.alert("Directions request failed due to " + status);
+  //     }
+  //   }
+  // );
 
   var flightPlanCoordinates = [
     { lat: 55.184259, lng: 27.59436 },
