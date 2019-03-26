@@ -83,9 +83,9 @@ function initMap() {
 
   function calculateAndDisplayRoute(directionsService, directionsDisplay) {
     let points = [
-      { lat: 55.121002, lng: 27.605627 },
-      { lat: 55.110663, lng: 27.616828 },
-      { lat: 55.118039, lng: 27.670563 }
+      { lat: 55.161061, lng: 27.500279 },
+      { lat: 55.20872, lng: 27.615587 },
+      { lat: 55.175211, lng: 27.657381 }
     ];
     var waypts = [];
     for (var i = 0; i < points.length; i++) {
@@ -123,41 +123,38 @@ function initMap() {
   }
   calculateAndDisplayRoute(directionsService, directionsDisplay);
 
-  directionsService2.route(
-    {
-      origin: { lat: 55.13401, lng: 27.670893 },
-      destination: { lat: 55.1401338, lng: 27.6717605 },
-      optimizeWaypoints: true,
-      travelMode: "DRIVING"
-    },
-    function(response, status) {
-      if (status === "OK") {
-        directionsDisplay2.setDirections(response);
-        var route = response.routes[0];
-        var summaryPanel = document.getElementsByClassName("totalDist")[0];
-        let allDistance = 0;
-        for (var i = 0; i < route.legs.length; i++) {
-          allDistance += parseInt(route.legs[i].distance.text);
-        }
-        summaryPanel.innerHTML += allDistance + "км";
-        bounds.union(response.routes[0].bounds);
-        map.fitBounds(bounds);
-      } else {
-        window.alert("Directions request failed due to " + status);
-      }
-    }
-  );
+  // directionsService2.route(
+  //   {
+  //     origin: { lat: 55.144227, lng: 27.506352 },
+  //     destination: { lat: 55.1401338, lng: 27.6717605 },
+  //     optimizeWaypoints: true,
+  //     travelMode: "DRIVING"
+  //   },
+  //   function(response, status) {
+  //     if (status === "OK") {
+  //       directionsDisplay2.setDirections(response);
+  //       var route = response.routes[0];
+  //       var summaryPanel = document.getElementsByClassName("totalDist")[0];
+  //       let allDistance = 0;
+  //       for (var i = 0; i < route.legs.length; i++) {
+  //         allDistance += parseInt(route.legs[i].distance.text);
+  //       }
+  //       summaryPanel.innerHTML += allDistance + "км";
+  //       bounds.union(response.routes[0].bounds);
+  //       map.fitBounds(bounds);
+  //     } else {
+  //       window.alert("Directions request failed due to " + status);
+  //     }
+  //   }
+  // );
 
   var flightPlanCoordinates = [
-    { lat: 55.133514, lng: 27.671614 },
-    { lat: 55.133546, lng: 27.671636 },
-    { lat: 55.133627, lng: 27.671489 },
-    { lat: 55.133639, lng: 27.671154 },
-    { lat: 55.133696, lng: 27.671141 },
-    { lat: 55.133721, lng: 27.671466 },
-    { lat: 55.133345, lng: 27.672394 },
-    { lat: 55.133313, lng: 27.672356 },
-    { lat: 55.133483, lng: 27.67168 }
+    { lat: 55.157407, lng: 27.51089 },
+    { lat: 55.155991, lng: 27.51029 },
+    { lat: 55.154299, lng: 27.510376 },
+    { lat: 55.150192, lng: 27.512296 },
+    { lat: 55.149561, lng: 27.512081 },
+    { lat: 55.144227, lng: 27.506352 }
   ];
 
   var flightPath = new google.maps.Polyline({
