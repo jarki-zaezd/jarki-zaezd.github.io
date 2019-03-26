@@ -82,11 +82,7 @@ function initMap() {
   map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 
   function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-    let points = [
-      { lat: 55.161061, lng: 27.500279 },
-      { lat: 55.20872, lng: 27.615587 },
-      { lat: 55.175211, lng: 27.657381 }
-    ];
+    let points = [{ lat: 55.149097, lng: 27.552748 }];
     var waypts = [];
     for (var i = 0; i < points.length; i++) {
       waypts.push({
@@ -98,7 +94,7 @@ function initMap() {
     directionsService.route(
       {
         origin: { lat: 55.1401338, lng: 27.6717605 },
-        destination: { lat: 55.1401338, lng: 27.6717605 },
+        destination: { lat: 55.184259, lng: 27.59436 },
         waypoints: waypts,
         optimizeWaypoints: true,
         travelMode: "DRIVING"
@@ -123,38 +119,52 @@ function initMap() {
   }
   calculateAndDisplayRoute(directionsService, directionsDisplay);
 
-  // directionsService2.route(
-  //   {
-  //     origin: { lat: 55.144227, lng: 27.506352 },
-  //     destination: { lat: 55.1401338, lng: 27.6717605 },
-  //     optimizeWaypoints: true,
-  //     travelMode: "DRIVING"
-  //   },
-  //   function(response, status) {
-  //     if (status === "OK") {
-  //       directionsDisplay2.setDirections(response);
-  //       var route = response.routes[0];
-  //       var summaryPanel = document.getElementsByClassName("totalDist")[0];
-  //       let allDistance = 0;
-  //       for (var i = 0; i < route.legs.length; i++) {
-  //         allDistance += parseInt(route.legs[i].distance.text);
-  //       }
-  //       summaryPanel.innerHTML += allDistance + "км";
-  //       bounds.union(response.routes[0].bounds);
-  //       map.fitBounds(bounds);
-  //     } else {
-  //       window.alert("Directions request failed due to " + status);
-  //     }
-  //   }
-  // );
+  directionsService2.route(
+    {
+      origin: { lat: 55.194671, lng: 27.634769 },
+      destination: { lat: 55.140116, lng: 27.672326 },
+      optimizeWaypoints: true,
+      travelMode: "DRIVING"
+    },
+    function(response, status) {
+      if (status === "OK") {
+        directionsDisplay2.setDirections(response);
+        var route = response.routes[0];
+        var summaryPanel = document.getElementsByClassName("totalDist")[0];
+        let allDistance = 0;
+        for (var i = 0; i < route.legs.length; i++) {
+          allDistance += parseInt(route.legs[i].distance.text);
+        }
+        summaryPanel.innerHTML += allDistance + "км";
+        bounds.union(response.routes[0].bounds);
+        map.fitBounds(bounds);
+      } else {
+        window.alert("Directions request failed due to " + status);
+      }
+    }
+  );
 
   var flightPlanCoordinates = [
-    { lat: 55.157407, lng: 27.51089 },
-    { lat: 55.155991, lng: 27.51029 },
-    { lat: 55.154299, lng: 27.510376 },
-    { lat: 55.150192, lng: 27.512296 },
-    { lat: 55.149561, lng: 27.512081 },
-    { lat: 55.144227, lng: 27.506352 }
+    { lat: 55.184259, lng: 27.59436 },
+    { lat: 55.182868, lng: 27.596677 },
+    { lat: 55.179542, lng: 27.606365 },
+    { lat: 55.182274, lng: 27.60784 },
+    { lat: 55.185125, lng: 27.607996 },
+    { lat: 55.186099, lng: 27.608377 },
+    { lat: 55.186626, lng: 27.609353 },
+    { lat: 55.186356, lng: 27.610683 },
+    { lat: 55.185805, lng: 27.611788 },
+    { lat: 55.186359, lng: 27.614459 },
+    { lat: 55.186874, lng: 27.620859 },
+    { lat: 55.186396, lng: 27.623933 },
+    { lat: 55.187679, lng: 27.625054 },
+    { lat: 55.189327, lng: 27.625161 },
+    { lat: 55.191593, lng: 27.627199 },
+    { lat: 55.192414, lng: 27.628181 },
+    { lat: 55.193391, lng: 27.628739 },
+    { lat: 55.194003, lng: 27.632832 },
+    { lat: 55.194441, lng: 27.633111 },
+    { lat: 55.194671, lng: 27.634769 }
   ];
 
   var flightPath = new google.maps.Polyline({
