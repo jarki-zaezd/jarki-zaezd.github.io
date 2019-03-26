@@ -82,7 +82,11 @@ function initMap() {
   map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 
   function calculateAndDisplayRoute(directionsService, directionsDisplay) {
-    let points = [{ lat: 55.132476, lng: 27.629894 }];
+    let points = [
+      { lat: 55.121002, lng: 27.605627 },
+      { lat: 55.110663, lng: 27.616828 },
+      { lat: 55.118039, lng: 27.670563 }
+    ];
     var waypts = [];
     for (var i = 0; i < points.length; i++) {
       waypts.push({
@@ -94,7 +98,7 @@ function initMap() {
     directionsService.route(
       {
         origin: { lat: 55.1401338, lng: 27.6717605 },
-        destination: { lat: 55.126283, lng: 27.621099 },
+        destination: { lat: 55.1401338, lng: 27.6717605 },
         waypoints: waypts,
         optimizeWaypoints: true,
         travelMode: "DRIVING"
