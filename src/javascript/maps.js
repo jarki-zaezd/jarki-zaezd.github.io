@@ -320,7 +320,8 @@ function initMap() {
   var marker = new google.maps.Marker({
     position: { lat: 55.123311, lng: 27.509763 },
     icon: {
-      url: "https://seamenschurch.org/sites/default/files/image_upload/2-church-color.png",
+      url:
+        "https://seamenschurch.org/sites/default/files/image_upload/2-church-color.png",
       scaledSize: new google.maps.Size(40, 40)
     },
     optimized: false,
@@ -336,7 +337,39 @@ function initMap() {
     },
     optimized: false,
     map: map
-  })
+  });
+
+  // плавающий человек
+  var marker = new google.maps.Marker({
+    position: { lat: 55.15893, lng: 27.671977 },
+    icon: {
+      url: "http://clipart-library.com/image_gallery/n1600113.png",
+      scaledSize: new google.maps.Size(30, 25)
+    },
+    optimized: false,
+    map: map
+  });
+
+  // police
+  var marker = new google.maps.Marker({
+    position: { lat: 55.189495, lng: 27.639463 },
+    icon: {
+      url: "http://www.stickpng.com/assets/images/580b585b2edbce24c47b2d23.png",
+      scaledSize: new google.maps.Size(70, 40)
+    },
+    optimized: false,
+    map: map
+  });
+
+  var contentString = `<p>Some tacnwcnsdjclsd </p>`;
+
+  let infowindow = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  marker.addListener("click", function() {
+    infowindow.open(map, marker);
+  });
   // }
 
   // var legend = document.getElementById("legend");
