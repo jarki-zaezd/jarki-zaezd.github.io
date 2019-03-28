@@ -4,73 +4,6 @@ body {
   overflow-x: hidden;
   position: relative; }
 
-.navbar {
-  -webkit-box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.33);
-  -moz-box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.33);
-  box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.33);
-  z-index: 999; }
-  .navbar .navbar-brand {
-    font-family: "Metal Mania", cursive;
-    font-size: 35px;
-    letter-spacing: 3px;
-    line-height: 1.1;
-    padding: 0;
-    margin-right: 30px; }
-    .navbar .navbar-brand:hover {
-      -webkit-animation: rotating 2s linear infinite;
-      -moz-animation: rotating 2s linear infinite;
-      -ms-animation: rotating 2s linear infinite;
-      -o-animation: rotating 2s linear infinite;
-      animation: rotating 2s linear infinite; }
-    .navbar .navbar-brand img {
-      height: 35px;
-      width: 25px;
-      margin-top: -4px; }
-  .navbar .nav-item {
-    margin-left: 5px; }
-  .navbar .nav-link {
-    font-family: "Open Sans", sans-serif;
-    font-size: 17px;
-    letter-spacing: 0.8px;
-    padding-right: 20px; }
-  .navbar .btn-toolbar button {
-    padding: 5px 18px; }
-
-#home {
-  position: relative;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  background-image: url("../images/sec-1.jpg");
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: center 50px;
-  background-repeat: no-repeat; }
-  #home .info {
-    font-family: "Open Sans", sans-serif;
-    text-align: center;
-    margin-top: 23%; }
-    #home .info h2 {
-      font-size: 42px;
-      font-weight: 400;
-      letter-spacing: 1.6px;
-      color: white;
-      margin-bottom: 30px; }
-    #home .info p {
-      letter-spacing: 1px;
-      color: #e2e2e2;
-      margin-bottom: 40px; }
-    #home .info a {
-      font-size: 20px;
-      color: white;
-      background: #447044;
-      padding-left: 24px;
-      padding-right: 24px; }
-      #home .info a:hover {
-        background: #63ac63; }
-      #home .info a:focus {
-        box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5); }
-
 #trips {
   position: relative;
   background: #fafafa;
@@ -218,6 +151,16 @@ body {
       #calendar .calendar-body th .date {
         position: absolute;
         top: 0; }
+    #calendar .calendar-body tbody th p {
+      padding: 0;
+      margin: 0; }
+    #calendar .calendar-body tbody th .fl-left {
+      position: relative;
+      text-align: end; }
+      #calendar .calendar-body tbody th .fl-left i {
+        position: absolute;
+        left: 0;
+        top: 20%; }
   #calendar .calendar-nav {
     position: relative;
     display: flex;
@@ -337,15 +280,77 @@ body {
       #calendar .slide-trips .back-overplay:hover {
         opacity: 1; }
 
-.overplay {
-  position: fixed;
+.navbar {
+  -webkit-box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.33);
+  box-shadow: 0px 2px 40px 0px rgba(0, 0, 0, 0.33);
+  z-index: 999; }
+  .navbar .trips-info h3 {
+    color: #ddd;
+    font-size: 17px;
+    letter-spacing: 0.8px;
+    margin-top: 10px; }
+  .navbar .navbar-brand {
+    font-family: "Metal Mania", cursive;
+    font-size: 35px;
+    letter-spacing: 3px;
+    line-height: 1.1;
+    padding: 0;
+    margin-right: 30px; }
+    .navbar .navbar-brand:hover {
+      -webkit-animation: rotating 2s linear infinite;
+      -moz-animation: rotating 2s linear infinite;
+      -ms-animation: rotating 2s linear infinite;
+      -o-animation: rotating 2s linear infinite;
+      animation: rotating 2s linear infinite; }
+    .navbar .navbar-brand img {
+      height: 35px;
+      width: 25px;
+      margin-top: -4px; }
+  .navbar .nav-item {
+    margin-left: 5px; }
+  .navbar .nav-link {
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+    letter-spacing: 0.8px;
+    padding-right: 20px; }
+  .navbar .btn-toolbar button {
+    padding: 5px 18px; }
+
+#home {
+  position: relative;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(63, 63, 63, 0.77);
-  transition: opacity 1s linear;
-  z-index: 900; }
+  height: 100vh;
+  background-image: url("../images/sec-1.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center 50px;
+  background-repeat: no-repeat; }
+  #home .info {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    margin-top: 23%; }
+    #home .info h2 {
+      font-size: 42px;
+      font-weight: 400;
+      letter-spacing: 1.6px;
+      color: white;
+      margin-bottom: 30px; }
+    #home .info p {
+      letter-spacing: 1px;
+      color: #e2e2e2;
+      margin-bottom: 40px; }
+    #home .info a {
+      font-size: 20px;
+      color: white;
+      background: #447044;
+      padding-left: 24px;
+      padding-right: 24px; }
+      #home .info a:hover {
+        background: #63ac63; }
+      #home .info a:focus {
+        box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5); }
 
 #stats {
   position: relative;
@@ -391,19 +396,6 @@ body {
       font-size: 18px;
       letter-spacing: 0.5px;
       line-height: 1.5; }
-
-footer {
-  position: relative;
-  z-index: 999; }
-  footer a {
-    color: #a8a8a8 !important;
-    margin-left: 3px; }
-
-nav .trips-info h3 {
-  color: #ddd;
-  font-size: 17px;
-  letter-spacing: 0.8px;
-  margin-top: 10px; }
 
 #trips-container {
   position: relative;
@@ -469,16 +461,22 @@ nav .trips-info h3 {
     margin-left: 50%;
     transform: translateX(-50%); }
 
-tbody th p {
-  padding: 0;
-  margin: 0; }
-tbody th .fl-left {
+.overplay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(63, 63, 63, 0.77);
+  transition: opacity 1s linear;
+  z-index: 900; }
+
+footer {
   position: relative;
-  text-align: end; }
-  tbody th .fl-left i {
-    position: absolute;
-    left: 0;
-    top: 20%; }
+  z-index: 999; }
+  footer a {
+    color: #a8a8a8 !important;
+    margin-left: 3px; }
 
 @media screen and (max-width: 1000px) {
   .container {

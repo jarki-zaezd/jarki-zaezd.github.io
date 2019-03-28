@@ -1,0 +1,61 @@
+#stats {
+  position: relative;
+  min-height: 75vh !important;
+  background: rgb(255, 255, 255);
+  text-align: center;
+
+  header {
+    padding-top: 60px;
+
+    h2 {
+      font-family: "Open Sans", sans-serif;
+      font-size: 42px;
+    }
+
+    p {
+      font-family: "Open Sans", sans-serif;
+      font-size: 22px;
+      color: rgb(119, 119, 119);
+      margin-bottom: 60px;
+    }
+  }
+
+  .container-flex {
+    color: white;
+    margin: 0 auto;
+    width: 96%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+  }
+
+  .canvas-cont {
+    position: relative;
+    width: 48%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 35px;
+    margin-bottom: 20px;
+    letter-spacing: 0.7px;
+  }
+  .info {
+    text-align: start;
+    margin: 0 auto;
+    width: 90%;
+
+    p {
+      font-size: 18px;
+      letter-spacing: 0.5px;
+      line-height: 1.5;
+    }
+  }
+}

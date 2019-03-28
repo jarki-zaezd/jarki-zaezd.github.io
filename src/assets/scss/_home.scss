@@ -1,0 +1,47 @@
+#home {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-image: url("../images/sec-1.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center 50px;
+  background-repeat: no-repeat;
+
+  .info {
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    margin-top: 23%;
+
+    h2 {
+      font-size: 42px;
+      font-weight: 400;
+      letter-spacing: 1.6px;
+      color: white;
+      margin-bottom: 30px;
+    }
+
+    p {
+      letter-spacing: 1px;
+      color: rgb(226, 226, 226);
+      margin-bottom: 40px;
+    }
+
+    a {
+      font-size: 20px;
+      color: white;
+      background: rgb(68, 112, 68);
+      padding-left: 24px;
+      padding-right: 24px;
+
+      &:hover {
+        background: rgb(99, 172, 99);
+      }
+
+      &:focus {
+        box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
+      }
+    }
+  }
+}
