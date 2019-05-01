@@ -1,0 +1,536 @@
+[
+  {
+    "id": 1,
+    "name": "Chill-1",
+    "type": "chill",
+    "picture": "http://localhost:9000/src/data/pussy-trip/trip-1/trip.png",
+    "firstRoute": [
+      { "lat": 55.140116, "lng": 27.672326 },
+      { "lat": 55.1458168, "lng": 27.6308895 },
+      { "lat": 55.156567, "lng": 27.629146 },
+      { "lat": 55.1523454, "lng": 27.6207906 },
+      { "lat": 55.144429, "lng": 27.617639 },
+      { "lat": 55.1401348, "lng": 27.6718545 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+  {
+    "id": 2,
+    "name": "Chill-2",
+    "type": "chill",
+    "picture": "http://localhost:9000/src/data/pussy-trip/trip-2/trip.png",
+    "firstRoute": [
+      { "lat": 55.1401338, "lng": 27.6717605 },
+      { "lat": 55.150962, "lng": 27.652105 },
+      { "lat": 55.1401338, "lng": 27.6717605 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+  {
+    "id": 3,
+    "name": "Chill-3",
+    "type": "chill",
+    "picture": "http://localhost:9000/src/data/pussy-trip/trip-3/trip.png",
+    "firstRoute": [
+      { "lat": 55.1401338, "lng": 27.6717605 },
+      { "lat": 55.152415, "lng": 27.6432 },
+      { "lat": 55.1401338, "lng": 27.6717605 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+  {
+    "id": 4,
+    "name": "Chill-4",
+    "type": "chill",
+    "picture": "http://localhost:9000/src/data/pussy-trip/trip-4/trip.png",
+    "firstRoute": [
+      { "lat": 55.1401338, "lng": 27.6717605 },
+      { "lat": 55.142689, "lng": 27.644977 }
+    ],
+    "secondRoute": [],
+    "polygon": [
+      { "lat": 55.142689, "lng": 27.644977 },
+      { "lat": 55.135735, "lng": 27.651704 },
+      { "lat": 55.138968, "lng": 27.668814 },
+      { "lat": 55.140102, "lng": 27.672258 }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Chill-5",
+    "type": "chill",
+    "picture": "http://localhost:9000/src/data/pussy-trip/trip-5/trip.png",
+    "firstRoute": [
+      { "lat": 55.1401338, "lng": 27.6717605 },
+      { "lat": 55.132476, "lng": 27.629894 }
+    ],
+    "secondRoute": [
+      { "lat": 55.144256, "lng": 27.620841 },
+      { "lat": 55.1401338, "lng": 27.6717605 }
+    ],
+    "polygon": [
+      { "lat": 55.132476, "lng": 27.629894 },
+      { "lat": 55.133028, "lng": 27.627329 },
+      { "lat": 55.133979, "lng": 27.625977 },
+      { "lat": 55.134666, "lng": 27.625569 },
+      { "lat": 55.135813, "lng": 27.624432 },
+      { "lat": 55.137337, "lng": 27.623268 },
+      { "lat": 55.139925, "lng": 27.61918 },
+      { "lat": 55.144266, "lng": 27.620822 }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Chill-6",
+    "type": "chill",
+    "picture": "http://localhost:9000/src/data/pussy-trip/trip-6/trip.png",
+    "firstRoute": [
+      { "lat": 55.1401338, "lng": 27.6717605 },
+      { "lat": 55.126283, "lng": 27.621099 }
+    ],
+    "secondRoute": [
+      { "lat": 55.13401, "lng": 27.670893 },
+      { "lat": 55.1401338, "lng": 27.6717605 }
+    ],
+    "polygon": [
+      { "lat": 55.126283, "lng": 27.621099 },
+      { "lat": 55.125854, "lng": 27.622515 },
+      { "lat": 55.124968, "lng": 27.624254 },
+      { "lat": 55.124744, "lng": 27.62677 },
+      { "lat": 55.124084, "lng": 27.628957 },
+      { "lat": 55.128915, "lng": 27.632848 },
+      { "lat": 55.129702, "lng": 27.634518 },
+      { "lat": 55.130705, "lng": 27.636068 },
+      { "lat": 55.131282, "lng": 27.63911 },
+      { "lat": 55.130288, "lng": 27.642924 },
+      { "lat": 55.127975, "lng": 27.646212 },
+      { "lat": 55.128073, "lng": 27.649023 },
+      { "lat": 55.129061, "lng": 27.652871 },
+      { "lat": 55.129073, "lng": 27.656551 },
+      { "lat": 55.129655, "lng": 27.658797 },
+      { "lat": 55.12952, "lng": 27.659752 },
+      { "lat": 55.130839, "lng": 27.663866 },
+      { "lat": 55.131734, "lng": 27.666849 },
+      { "lat": 55.131716, "lng": 27.670529 },
+      { "lat": 55.132826, "lng": 27.670196 },
+      { "lat": 55.132875, "lng": 27.671505 },
+      { "lat": 55.13401, "lng": 27.670893 }
+    ]
+  },
+
+  {
+    "id": 7,
+    "name": "Savage-1",
+    "type": "savage",
+    "picture": "http://localhost:9000/src/data/savage-trip/trip-1/trip.png",
+    "firstRoute": [
+      { "lat": 55.140116, "lng": 27.672326 },
+      { "lat": 55.140537, "lng": 27.581542 },
+      { "lat": 55.117808, "lng": 27.589855 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+  {
+    "id": 8,
+    "name": "Savage-2",
+    "type": "savage",
+    "picture": "http://localhost:9000/src/data/savage-trip/trip-2/trip.png",
+    "firstRoute": [
+      { "lat": 55.140116, "lng": 27.672326 },
+      { "lat": 55.156635, "lng": 27.619375 },
+      { "lat": 55.176806, "lng": 27.563773 },
+      { "lat": 55.149101, "lng": 27.552846 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+  {
+    "id": 9,
+    "name": "Savage-3",
+    "type": "savage",
+    "picture": "http://localhost:9000/src/data/savage-trip/trip-3/trip.png",
+    "firstRoute": [
+      { "lat": 55.140116, "lng": 27.672326 },
+      { "lat": 55.121002, "lng": 27.605627 },
+      { "lat": 55.110663, "lng": 27.616828 },
+      { "lat": 55.118039, "lng": 27.670563 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+  {
+    "id": 10,
+    "name": "Savage-4",
+    "type": "savage",
+    "picture": "http://localhost:9000/src/data/savage-trip/trip-4/trip.png",
+    "firstRoute": [
+      { "lat": 55.1401338, "lng": 27.6717605 },
+      { "lat": 55.126283, "lng": 27.621099 }
+    ],
+    "secondRoute": [
+      { "lat": 55.13401, "lng": 27.670893 },
+      { "lat": 55.1401338, "lng": 27.6717605 }
+    ],
+    "polygon": [
+      { "lat": 55.126283, "lng": 27.621099 },
+      { "lat": 55.125854, "lng": 27.622515 },
+      { "lat": 55.124968, "lng": 27.624254 },
+      { "lat": 55.124744, "lng": 27.62677 },
+      { "lat": 55.124084, "lng": 27.628957 },
+      { "lat": 55.128915, "lng": 27.632848 },
+      { "lat": 55.129702, "lng": 27.634518 },
+      { "lat": 55.130705, "lng": 27.636068 },
+      { "lat": 55.131282, "lng": 27.63911 },
+      { "lat": 55.130288, "lng": 27.642924 },
+      { "lat": 55.127975, "lng": 27.646212 },
+      { "lat": 55.128073, "lng": 27.649023 },
+      { "lat": 55.129061, "lng": 27.652871 },
+      { "lat": 55.129073, "lng": 27.656551 },
+      { "lat": 55.129655, "lng": 27.658797 },
+      { "lat": 55.12952, "lng": 27.659752 },
+      { "lat": 55.130839, "lng": 27.663866 },
+      { "lat": 55.131734, "lng": 27.666849 },
+      { "lat": 55.131716, "lng": 27.670529 },
+      { "lat": 55.132826, "lng": 27.670196 },
+      { "lat": 55.132875, "lng": 27.671505 },
+      { "lat": 55.13401, "lng": 27.670893 }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Savage-5",
+    "type": "savage",
+    "picture": "http://localhost:9000/src/data/savage-trip/trip-5/trip.png",
+    "firstRoute": [
+      { "lat": 55.1401338, "lng": 27.6717605 },
+      { "lat": 55.132476, "lng": 27.629894 }
+    ],
+    "secondRoute": [
+      { "lat": 55.144256, "lng": 27.620841 },
+      { "lat": 55.1401338, "lng": 27.6717605 }
+    ],
+    "polygon": [
+      { "lat": 55.132476, "lng": 27.629894 },
+      { "lat": 55.133028, "lng": 27.627329 },
+      { "lat": 55.133979, "lng": 27.625977 },
+      { "lat": 55.134666, "lng": 27.625569 },
+      { "lat": 55.135813, "lng": 27.624432 },
+      { "lat": 55.137337, "lng": 27.623268 },
+      { "lat": 55.139925, "lng": 27.61918 },
+      { "lat": 55.144266, "lng": 27.620822 }
+    ]
+  },
+
+  {
+    "id": 12,
+    "name": "Escape-1",
+    "type": "escape",
+    "picture": "http://localhost:9000/src/data/try-escape-trip/trip-1/trip.png",
+    "firstRoute": [
+      { "lat": 55.140116, "lng": 27.672326 },
+      { "lat": 55.184259, "lng": 27.59436 },
+      { "lat": 55.184259, "lng": 27.59436 }
+    ],
+    "secondRoute": [
+      { "lat": 55.194671, "lng": 27.634769 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "polygon": [
+      { "lat": 55.184259, "lng": 27.59436 },
+      { "lat": 55.182868, "lng": 27.596677 },
+      { "lat": 55.179542, "lng": 27.606365 },
+      { "lat": 55.182274, "lng": 27.60784 },
+      { "lat": 55.185125, "lng": 27.607996 },
+      { "lat": 55.186099, "lng": 27.608377 },
+      { "lat": 55.186626, "lng": 27.609353 },
+      { "lat": 55.186356, "lng": 27.610683 },
+      { "lat": 55.185805, "lng": 27.611788 },
+      { "lat": 55.186359, "lng": 27.614459 },
+      { "lat": 55.186874, "lng": 27.620859 },
+      { "lat": 55.186396, "lng": 27.623933 },
+      { "lat": 55.187679, "lng": 27.625054 },
+      { "lat": 55.189327, "lng": 27.625161 },
+      { "lat": 55.191593, "lng": 27.627199 },
+      { "lat": 55.192414, "lng": 27.628181 },
+      { "lat": 55.193391, "lng": 27.628739 },
+      { "lat": 55.194003, "lng": 27.632832 },
+      { "lat": 55.194441, "lng": 27.633111 },
+      { "lat": 55.194671, "lng": 27.634769 }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Escape-2",
+    "type": "escape",
+    "picture": "http://localhost:9000/src/data/try-escape-trip/trip-2/trip.png",
+    "firstRoute": [
+      { "lat": 55.140116, "lng": 27.672326 },
+      { "lat": 55.149097, "lng": 27.552748 },
+      { "lat": 55.184259, "lng": 27.59436 }
+    ],
+    "secondRoute": [
+      { "lat": 55.194671, "lng": 27.634769 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "polygon": [
+      { "lat": 55.184259, "lng": 27.59436 },
+      { "lat": 55.182868, "lng": 27.596677 },
+      { "lat": 55.179542, "lng": 27.606365 },
+      { "lat": 55.182274, "lng": 27.60784 },
+      { "lat": 55.185125, "lng": 27.607996 },
+      { "lat": 55.186099, "lng": 27.608377 },
+      { "lat": 55.186626, "lng": 27.609353 },
+      { "lat": 55.186356, "lng": 27.610683 },
+      { "lat": 55.185805, "lng": 27.611788 },
+      { "lat": 55.186359, "lng": 27.614459 },
+      { "lat": 55.186874, "lng": 27.620859 },
+      { "lat": 55.186396, "lng": 27.623933 },
+      { "lat": 55.187679, "lng": 27.625054 },
+      { "lat": 55.189327, "lng": 27.625161 },
+      { "lat": 55.191593, "lng": 27.627199 },
+      { "lat": 55.192414, "lng": 27.628181 },
+      { "lat": 55.193391, "lng": 27.628739 },
+      { "lat": 55.194003, "lng": 27.632832 },
+      { "lat": 55.194441, "lng": 27.633111 },
+      { "lat": 55.194671, "lng": 27.634769 }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Escape-3",
+    "type": "escape",
+    "picture": "http://localhost:9000/src/data/try-escape-trip/trip-3/trip.png",
+    "firstRoute": [
+      { "lat": 55.140116, "lng": 27.672326 },
+      { "lat": 55.173637, "lng": 27.6562007 },
+      { "lat": 55.179067, "lng": 27.725003 },
+      { "lat": 55.152928, "lng": 27.754424 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+  {
+    "id": 15,
+    "name": "Escape-4",
+    "type": "escape",
+    "picture": "http://localhost:9000/src/data/try-escape-trip/trip-4/trip.png",
+    "firstRoute": [
+      { "lat": 55.140116, "lng": 27.672326 },
+      { "lat": 55.140537, "lng": 27.581542 },
+      { "lat": 55.117808, "lng": 27.589855 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+
+  {
+    "id": 16,
+    "name": "Train-1",
+    "type": "train",
+    "picture": "http://localhost:9000/src/data/train-trip/trip-4/trip.png",
+    "firstRoute": [
+      { "lat": 55.131541, "lng": 27.50469 },
+      { "lat": 55.140106, "lng": 27.672374 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+  {
+    "id": 17,
+    "name": "Train-2",
+    "type": "train",
+    "picture": "http://localhost:9000/src/data/train-trip/trip-2/trip.png",
+    "firstRoute": [
+      { "lat": 55.14947, "lng": 27.377256 },
+      { "lat": 55.094033, "lng": 27.398867 },
+      { "lat": 55.140125, "lng": 27.672401 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+  {
+    "id": 18,
+    "name": "Train-3",
+    "type": "train",
+    "picture": "http://localhost:9000/src/data/train-trip/trip-3/trip.png",
+    "firstRoute": [
+      { "lat": 55.032147, "lng": 27.77743 },
+      { "lat": 55.140125, "lng": 27.672401 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+  {
+    "id": 19,
+    "name": "Train-4",
+    "type": "train",
+    "picture": "http://localhost:9000/src/data/train-trip/trip-4/trip.png",
+    "firstRoute": [
+      { "lat": 55.151788, "lng": 27.926319 },
+      { "lat": 55.140125, "lng": 27.672401 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+  {
+    "id": 20,
+    "name": "Train-5",
+    "type": "train",
+    "picture": "http://localhost:9000/src/data/train-trip/trip-5/trip.png",
+    "firstRoute": [
+      { "lat": 55.266382, "lng": 27.913685 },
+      { "lat": 55.140125, "lng": 27.672401 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+  {
+    "id": 21,
+    "name": "Train-6",
+    "type": "train",
+    "picture": "http://localhost:9000/src/data/train-trip/trip-6/trip.png",
+    "firstRoute": [
+      { "lat": 55.243172, "lng": 27.555897 },
+      { "lat": 55.140125, "lng": 27.672401 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+  {
+    "id": 22,
+    "name": "Train-7",
+    "type": "train",
+    "picture": "http://localhost:9000/src/data/train-trip/trip-7/trip.png",
+    "firstRoute": [
+      { "lat": 55.032513, "lng": 27.648146 },
+      { "lat": 55.140125, "lng": 27.672401 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+  {
+    "id": 23,
+    "name": "Train-8",
+    "type": "train",
+    "picture": "http://localhost:9000/src/data/train-trip/trip-8/trip.png",
+    "firstRoute": [
+      { "lat": 55.167332, "lng": 27.673947 },
+      { "lat": 55.140125, "lng": 27.672401 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+
+  {
+    "id": 24,
+    "name": "Road-1",
+    "type": "road",
+    "picture": "http://localhost:9000/src/data/no-road-trip/trip-1/trip.png",
+    "firstRoute": [
+      { "lat": 55.140116, "lng": 27.672326 },
+      { "lat": 55.173637, "lng": 27.6562007 },
+      { "lat": 55.179067, "lng": 27.725003 },
+      { "lat": 55.152928, "lng": 27.754424 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+  {
+    "id": 25,
+    "name": "Road-2",
+    "type": "road",
+    "picture": "http://localhost:9000/src/data/no-road-trip/trip-2/trip.png",
+    "firstRoute": [
+      { "lat": 55.140116, "lng": 27.672326 },
+      { "lat": 55.157407, "lng": 27.51089 }
+    ],
+    "secondRoute": [
+      { "lat": 55.144227, "lng": 27.506352 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "polygon": [
+      { "lat": 55.157407, "lng": 27.51089 },
+      { "lat": 55.155991, "lng": 27.51029 },
+      { "lat": 55.154299, "lng": 27.510376 },
+      { "lat": 55.150192, "lng": 27.512296 },
+      { "lat": 55.149561, "lng": 27.512081 },
+      { "lat": 55.144227, "lng": 27.506352 }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Road-3",
+    "type": "road",
+    "picture": "http://localhost:9000/src/data/no-road-trip/trip-3/trip.png",
+    "firstRoute": [
+      { "lat": 55.140116, "lng": 27.672326 },
+      { "lat": 55.161061, "lng": 27.500279 },
+      { "lat": 55.20872, "lng": 27.615587 },
+      { "lat": 55.175211, "lng": 27.657381 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+  {
+    "id": 27,
+    "name": "Road-4",
+    "type": "road",
+    "picture": "http://localhost:9000/src/data/no-road-trip/trip-4/trip.png",
+    "firstRoute": [
+      { "lat": 55.140116, "lng": 27.672326 },
+      { "lat": 55.156635, "lng": 27.619375 },
+      { "lat": 55.176806, "lng": 27.563773 },
+      { "lat": 55.149101, "lng": 27.552846 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "secondRoute": [],
+    "polygon": []
+  },
+
+  {
+    "id": 28,
+    "name": "Speed-1",
+    "type": "speed",
+    "picture": "http://localhost:9000/src/data/speed-hack-trip/trip-1/trip.png",
+    "firstRoute": [],
+    "secondRoute": [],
+    "polygon": [
+      { "lat": 55.136989, "lng": 27.670737 },
+      { "lat": 55.137049, "lng": 27.67141 },
+      { "lat": 55.137331, "lng": 27.671233 },
+      { "lat": 55.137587, "lng": 27.671163 },
+      { "lat": 55.137457, "lng": 27.67061 },
+      { "lat": 55.137032, "lng": 27.670666 }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Speed-2",
+    "type": "speed",
+    "picture": "http://localhost:9000/src/data/speed-hack-trip/trip-2/trip.png",
+    "firstRoute": [],
+    "secondRoute": [],
+    "polygon": [
+      { "lat": 55.133514, "lng": 27.671614 },
+      { "lat": 55.133546, "lng": 27.671636 },
+      { "lat": 55.133627, "lng": 27.671489 },
+      { "lat": 55.133639, "lng": 27.671154 },
+      { "lat": 55.133696, "lng": 27.671141 },
+      { "lat": 55.133721, "lng": 27.671466 },
+      { "lat": 55.133345, "lng": 27.672394 },
+      { "lat": 55.133313, "lng": 27.672356 },
+      { "lat": 55.133483, "lng": 27.67168 }
+    ]
+  }
+]

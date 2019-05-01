@@ -1,0 +1,8 @@
+@include keyframes(rotating) {
+  from {
+    @include transform(0deg);
+  }
+  to {
+    @include transform(360deg);
+  }
+}

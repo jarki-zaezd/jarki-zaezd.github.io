@@ -20,6 +20,9 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
+    "googleapis": "^27.0.0",
+    "mongodb": "^3.2.3",
+    "mongoose": "^5.5.4",
     "nodemon": "^1.18.10",
     "webpack": "^4.29.5"
   },

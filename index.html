@@ -36,11 +36,11 @@
         new WOW().init();
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
-    <link href="src/assets/css/index.css" rel="stylesheet">
+    <link href="src/assets/css/index.css" rel="stylesheet">    
 </head>
 
 <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
         <a class="navbar-brand" href="#">Z<span><img src="src/assets/images/logo-illuminati.png"></span>EZD</a>
 
@@ -52,10 +52,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#calendar">Calendar</a>
+                    <a class="nav-link" href="/">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#trips">Trips</a>
@@ -73,30 +70,30 @@
     <section id="home">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-10 col-lg-10 info">
-                    <h2>The easiest way to plan personalized trips with local travel experts</h2>
-                    <p>Get your vacation custom-made by a trip designer that know what the guidebooks don’t</p>
-                    <a href="#calendar" class="btn btn-lg">Explore</a>
+                <div class="col-10 col-lg-10 header">
+                    <h2 class="header__headline">The easiest way to plan personalized trips with local travel experts</h2>
+                    <p class="header__main-description">Get your vacation custom-made by a trip designer that know what the guidebooks don’t</p>
+                    <a href="#calendar" class="header__explore-link btn btn-lg">Explore</a>
                 </div>
             </div>
         </div>
     </section>
     <section id="calendar">
-        <div class="calendar">
-            <div class="calendar-info">
-                <h2>My trip calendar</h2>
-                <p>Next trip is: <span>February 28, 2019</span></p>
+        <div class="small-calendar">
+            <div class="small-calendar__container">
+                <h2 class="small-calendar__name">Trip calendar</h2>
+                <p class="small-calendar__next-event">Next trip is: 
+                    <span class="small-calendar__next-event__date">February 28, 2019</span></p>
                 <div class="mini-calendar"></div>
-                <a href="" class="btn btn-success">Plan trip</a>
             </div>
             <div class="calendar-body">
                 <div class="calendar-nav">
                     <a href="" class="prev">
-                        <i class="fa fa-chevron-left"></i>Jan 2019
+                        <i class="fa fa-chevron-left"></i>
                     </a>
                     <h4 class="title">February 2019</h4>
                     <a href="" class="next">
-                        Mar 2019<i class="fa fa-chevron-right"></i>
+                        <i class="fa fa-chevron-right"></i>
                     </a>
                 </div>
                 <table>
@@ -118,7 +115,7 @@
             <i class="fa fa-times" aria-hidden="true"></i>
             <h3>Click on type and choose trip</h3>
             <div class="select-aria">
-                <a class="select-item red-color" href="#" data-filter='.trip-1'>Pussy trip</a>
+                <a class="select-item red-color" href="#" data-filter='.trip-1'>Chill trip</a>
                 <a class="select-item" href="#" data-filter='.trip-2'>Savage trip</a>
                 <a class="select-item" href="#" data-filter='.trip-3'>Try escape trip</a>
                 <a class="select-item" href="#" data-filter='.trip-4'>Train trip</a>
@@ -126,344 +123,110 @@
                 <a class="select-item" href="#" data-filter='.trip-6'>Speed hack trip</a>
             </div>
             <div class="slide-trips">
-                <div href="" class="slide trip-1">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <!-- FIRST SECTION -->
+                <div href="" class="slide trip-1 chill-1" data-name="Chill-1">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-1">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-1 chill-2" data-name="Chill-2">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-1">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-1 chill-3" data-name="Chill-3">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-1">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-1 chill-4" data-name="Chill-4">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-1">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-1 chill-5" data-name="Chill-5">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-1">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-1 chill-6" data-name="Chill-6">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-1">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+
+                <!-- SECOND SECTION -->
+                <div href="" class="slide trip-2 savag-1" data-name="Savage-1">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-1">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-2 savag-2" data-name="Savage-2">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-1">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-2 savag-3" data-name="Savage-3">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-1">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-2 savag-4" data-name="Savage-4">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-2">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-2 savag-5" data-name="Savage-5">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-2">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+
+                <!-- THIRD SECTION -->
+                <div href="" class="slide trip-3 ecs-1" data-name="Escape-1">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-2">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-3 ecs-2" data-name="Escape-2">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-2">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-3 ecs-3" data-name="Escape-3">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-2">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-3 ecs-4" data-name="Escape-4">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-2">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+
+                <!-- FOURH SECTION -->
+                <div href="" class="slide trip-4 tr-1" data-name="Train-1">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-2">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-4 tr-2" data-name="Train-2">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-2">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-4 tr-3" data-name="Train-3">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-2">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-4 tr-4" data-name="Train-4">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-2">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-4 tr-5" data-name="Train-5">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
+                </div>
+                <div href="" class="slide trip-4 tr-6" data-name="Train-6">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
+                </div>
+                <div href="" class="slide trip-4 tr-7" data-name="Train-7">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
+                </div>
+                <div href="" class="slide trip-4 tr-8" data-name="Train-8">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
 
 
-                <div href="" class="slide trip-3">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <!-- FIVES SECTION -->
+                <div href="" class="slide trip-5 road-1" data-name="Road-1">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-3">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-5 road-2" data-name="Road-2">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-3">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-5 road-3" data-name="Road-3">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-3">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-3">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-3">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-3">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-3">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-3">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-3">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-5 road-4" data-name="Road-4">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
 
 
-                <div href="" class="slide trip-4">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <!-- SIXTHS SECTION -->
+                <div href="" class="slide trip-6 spd-1" data-name="Speed-1">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
-                <div href="" class="slide trip-4">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-4">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-4">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-4">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-4">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-4">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-4">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-4">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-4">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-
-
-                <div href="" class="slide trip-5">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-5">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-5">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-5">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-5">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-5">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-5">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-5">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-5">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-5">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-
-                <div href="" class="slide trip-6">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-6">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-6">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-6">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-6">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-6">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-6">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-6">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-6">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
-                </div>
-                <div href="" class="slide trip-6">
-                    <div class="back-overplay"><i class="fas fa-search"></i></div>
+                <div href="" class="slide trip-6 spd-2" data-name="Speed-2">
+                    <div class="back-overplay"><i class="fas fa-hand-pointer"></i></div>
                 </div>
             </div>
 
-            <a href="" class="btn btn-danger">Start rolling now</a>
+            <a href="" class="btn btn-danger submit">Start rolling now</a>
         </div>
-        </div>
-    </section>
-    <section id="trips">
-        <div class="container">
-            <div class="row justify-content-center">
-                <header>
-                    <h2>Vitae lacus dictum?</h2>
-                    <p>Orem ipsum dolor sit amet, nunc sollicitudin mi
-                        condimentum, a sollicitudin eros malesuada.</p>
-                </header>
-                <div class="card" data-trip="pussy-trip">
-                    <div class="card-body">
-                        <i class="fas fa-walking"></i>
-                        <h3>Pussy trip</h3>
-                        <p>Integer interdum nulla justo, eu porttitor arcu malesuada sit amet. Maecenas dictum ex sed
-                            metus cursus, vitae egestas purus commodo...</p>
-                    </div>
-                    <div class="card-image">
-                        <img src="src/assets/images/gallery-1.jpg" alt="">
-                    </div>
-                    <div class="card-footer">
-                        <a class='btn btn-danger' href="#">Start riding</a>
-                    </div>
-                </div>
-                <div class="card" data-trip="pussy-trip">
-                    <div class="card-body">
-                        <i class="fab fa-studiovinari"></i>
-                        <h3>Savage trip</h3>
-                        <p>Integer interdum nulla justo, eu porttitor arcu malesuada sit amet. Maecenas dictum ex sed
-                            metus cursus, vitae egestas purus commodo...</p>
-                    </div>
-                    <div class="card-image">
-                        <img src="src/assets/images/gallery-2.jpg" alt="">
-                    </div>
-                    <div class="card-footer">
-                        <a class='btn btn-danger' href="#">Start riding</a>
-                    </div>
-                </div>
-                <div class="card" data-trip="pussy-trip">
-                    <div class="card-body">
-                        <i class="fas fa-skull-crossbones"></i>
-                        <h3>Try escape trip</h3>
-                        <p>Integer interdum nulla justo, eu porttitor arcu malesuada sit amet. Maecenas dictum ex sed
-                            metus cursus, vitae egestas purus commodo...</p>
-                    </div>
-                    <div class="card-image">
-                        <img src="src/assets/images/gallery-3.jpeg" alt="">
-                    </div>
-                    <div class="card-footer">
-                        <a class='btn btn-danger' href="#">Start riding</a>
-                    </div>
-                </div>
-                <div class="card" data-trip="pussy-trip">
-                    <div class="card-body">
-                        <i class="fas fa-user-secret"></i>
-                        <h3>Train trip</h3>
-                        <p>Integer interdum nulla justo, eu porttitor arcu malesuada sit amet. Maecenas dictum ex sed
-                            metus cursus, vitae egestas purus commodo...</p>
-                    </div>
-                    <div class="card-image">
-                        <img src="src/assets/images/gallery-4.jpg" alt="">
-                    </div>
-                    <div class="card-footer">
-                        <a class='btn btn-danger' href="#">Start riding</a>
-                    </div>
-                </div>
-                <div class="card" data-trip="pussy-trip">
-                    <div class="card-body">
-                        <i class="fas fa-book-dead"></i>
-                        <h3>No road trip</h3>
-                        <p>Integer interdum nulla justo, eu porttitor arcu malesuada sit amet. Maecenas dictum ex sed
-                            metus cursus, vitae egestas purus commodo...</p>
-                    </div>
-                    <div class="card-image">
-                        <img src="src/assets/images/gallery-5.jpg" alt="">
-                    </div>
-                    <div class="card-footer">
-                        <a class='btn btn-danger' href="#">Start riding</a>
-                    </div>
-                </div>
-                <div class="card" data-trip="pussy-trip">
-                    <div class="card-body">
-                        <i class="fas fa-dragon"></i>
-                        <h3>Speed hack trip</h3>
-                        <p>Integer interdum nulla justo, eu porttitor arcu malesuada sit amet. Maecenas dictum ex sed
-                            metus cursus, vitae egestas purus commodo...</p>
-                    </div>
-                    <div class="card-image">
-                        <img src="src/assets/images/gallery-6.jpg" alt="">
-                    </div>
-                    <div class="card-footer">
-                        <a class='btn btn-danger' href="#">Start riding</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </section>
-    <section id="stats">
-        <header>
-            <h2>Vitae lacus dictum?</h2>
-            <p>Orem ipsum dolor sit amet, nunc sollicitudin mi condimentum, a sollicitudin eros malesuada.</p>
-        </header>
-        <div class="container-flex">
-            <div class="canvas-cont" style="background: #61BC7B; padding-left: 40px; padding-right: 20px; border-top-left-radius: 10px;">
-                <h2>Time spending</h2>
-                <div class="wrapper">
-                    <canvas id="time" role="img" aria-label="" </canvas> </div> <div class="info">
-                        <p>Nunc aliquam diam ac magna dapibus finibus. Suspendisse sed dictum nibh, quis efficitur
-                            diam.
-                            Cras in lacinia quam. Maecenas in pellentesque eros.</p>
-                </div>
-            </div>
-
-            <div class="canvas-cont" style="background: #508CC8; padding-right: 40px; padding-left: 20px; border-top-right-radius: 10px;">
-                <h2>Trip difficulty count</h2>
-                <div class="wrapper">
-                    <canvas id="trip-difficulty" role="img" aria-label=""></canvas>
-                </div>
-                <div class="info">
-
-                    <p>Nunc aliquam diam ac magna dapibus finibus. Suspendisse sed dictum nibh, quis efficitur diam.
-                        Cras in lacinia quam. Maecenas in pellentesque eros.</p>
-                </div>
-            </div>
-
-            <div class="canvas-cont" style="background: #F49952; padding-left: 40px; padding-right: 20px; border-bottom-left-radius: 10px;">
-                <h2>Trip mile</h2>
-                <div class="wrapper">
-                    <canvas id="trip-all-way" role="img" aria-label=""></canvas>
-                </div>
-                <div class="info">
-                    <p>Nunc aliquam diam ac magna dapibus finibus. Suspendisse sed dictum nibh, quis efficitur diam.
-                        Cras in lacinia quam. Maecenas in pellentesque eros.</p>
-                </div>
-            </div>
-
-            <div class="canvas-cont" style="background: rgb(141, 143, 206); padding-right: 40px; padding-left: 20px; border-bottom-right-radius: 10px;">
-                <h2>Trip season</h2>
-                <div class="wrapper">
-                    <canvas id="trip-activity" role="img" aria-label=""></canvas>
-                </div>
-                <div class="info">
-                    <p>Nunc aliquam diam ac magna dapibus finibus. Suspendisse sed dictum nibh, quis efficitur diam.
-                        Cras in lacinia quam. Maecenas in pellentesque eros.</p>
-                </div>
-            </div>
         </div>
     </section>
     <footer class="page-footer font-small bg-dark">
@@ -477,11 +240,11 @@
     <script src="src/javascript/weather.class.js"></script>
     <script src="src/javascript/constant.js"></script>
     <script src="./dist/main.js"></script>
-    <script src="./src/javascript/app.js"></script>
+    <script src="./src/javascript/calendar.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="src/javascript/navigation.js"></script>
     <script src="src/javascript/gallery.js"></script>
-    <script src="src/javascript/graph.js"></script>
-    <script src="src/javascript/scrap.js"></script>
+    <!-- <script src="src/javascript/scrap.js"></script> -->
 </body>
 
 </html>

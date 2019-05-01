@@ -11,3 +11,25 @@
   -moz-box-shadow: $prop;
   box-shadow: $prop;
 }
+
+@mixin transform($prop) {
+  -ms-transform: rotate($prop);
+  -moz-transform: rotate($prop);
+  -webkit-transform: rotate($prop);
+  -o-transform: rotate($prop);
+  transform: rotate($prop);
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}

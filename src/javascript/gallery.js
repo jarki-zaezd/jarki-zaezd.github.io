@@ -1,7 +1,5 @@
 $(document).ready(function ($) {
 
-
-
     if ($('.slide-trips').length > 0) {
 
         var $container = $('.slide-trips');

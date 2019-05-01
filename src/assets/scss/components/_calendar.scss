@@ -1,0 +1,473 @@
+#calendar {
+  position: relative;
+  min-height: 100vh !important;
+  padding-bottom: 60px;
+
+  .small-calendar {
+    display: flex;
+    justify-content: center;
+  }
+
+  .small-calendar__container {
+    margin: 25px;
+
+    .flatpickr-calendar {
+      width: 250px;
+      border: 0;
+    }
+
+    .flatpickr-days {
+      width: 250px;
+      height: 250px;
+      border: 0;
+    }
+
+    .dayContainer {
+      min-width: 200px !important;
+      width: 250px;
+      height: 250px;
+    }
+
+    .flatpickr-innerContainer {
+      border: 0;
+    }
+
+    .flatpickr-rContainer {
+      width: 250px;
+      height: 274px;
+    }
+  }
+
+  .calendar-body {
+    display: flex;
+    flex-direction: column;
+    width: 84%;
+
+    table,
+    th,
+    tr {
+      border: 1px solid #ddd;
+    }
+
+    table {
+      height: 88vh;
+    }
+
+    thead tr {
+      text-align: center;
+    }
+
+    tbody {
+      cursor: pointer;
+    }
+
+    tbody th {
+      cursor: pointer;
+      height: 16.66%;
+    }
+
+    th {
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 400;
+      font-size: 13px;
+      position: relative;
+      width: 14.285%;
+
+      .date {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        font-size: 13px;
+      }
+    }
+    tbody th {
+      p {
+        padding: 0;
+        margin: 0;
+      }
+
+      .fl-left {
+        position: relative;
+        text-align: end;
+
+        i {
+          position: absolute;
+          left: 0;
+          top: 20%;
+        }
+      }
+    }
+  }
+
+  .calendar-nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #1bbc9b;
+
+    a {
+      color: white;
+      font-size: 13px;
+      top: 13px;
+      font-weight: 500;
+    }
+
+    i {
+      font-size: 13px;
+      margin: 0px 4px;
+    }
+
+    .next {
+      position: absolute;
+      right: 25px;
+    }
+
+    .prev {
+      position: absolute;
+      left: 25px;
+    }
+
+    .title {
+      font-family: Arial, serif;
+      font-size: 20px;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+      color: white;
+      line-height: 0;
+      margin: 22px 0;
+    }
+  }
+
+  .choose-trip {
+    width: 900px;
+    height: 650px;
+    padding: 20px;
+    text-align: center;
+    visibility: hidden;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    margin: -260px 0 0 -450px;
+    background: white;
+    z-index: 999;
+    overflow: scroll;
+
+    h3 {
+      margin-bottom: 20px;
+    }
+
+    .fa-times {
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      font-size: 40px;
+      width: 55px;
+      height: 55px;
+      background: white;
+      color: black;
+      cursor: pointer;
+
+      &::before {
+        position: absolute;
+        top: 6px;
+        left: 15px;
+      }
+    }
+  }
+  .select-aria {
+    display: flex;
+    max-width: 600px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 130px;
+    margin-bottom: 40px;
+
+    .select-item {
+      color: black;
+      text-decoration: none;
+      padding: 10px 0;
+      width: 150px;
+      margin: 10px;
+      border: 1px solid black;
+      border-radius: 7px;
+      transition: all 0.3s ease-in;
+
+      &:hover {
+        border-color: white;
+        color: white;
+        background: #dc3545;
+      }
+    }
+
+    .red-color {
+      background: #dc3545;
+      border-color: white;
+      color: white;
+    }
+  }
+  .slide-trips {
+    display: flex;
+    justify-content: center;
+    margin-left: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+
+    .slide {
+      // position: relative;
+      width: 400px;
+      height: 280px;
+      margin: 8px 6px;
+      background: url("../images/gallery-1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    i {
+      color: black;
+      background: white;
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin: -25px 0 0 -25px;
+      border-radius: 50%;
+
+      &::before {
+        position: absolute;
+        top: 12px;
+        right: 15px;
+        font-size: 25px;
+      }
+    }
+
+    .back-overplay {
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0;
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
+      transition: all 0.2s ease;
+      z-index: 999;
+
+      &:not(.nohover):hover {
+        opacity: 1;
+      }
+    }
+  }
+  .selected-trip {
+    // background: rgba(0, 0, 0, 0.5);
+    // opacity: 0;
+  }
+}
+
+.event {
+  position: relative;
+  width: 94%;
+  margin: 2px 0;
+  height: 20%;
+  background-color: #dc3545;
+  border-radius: 5px;
+  color: #fff;
+  padding-left: 3px;
+  font-weight: 500;
+}
+
+.more {
+  position: relative;
+  width: 94%;
+  margin: 2px 0;
+  height: 20%;
+  border-radius: 5px;
+  background-color: #fff;
+  padding-left: 3px;
+  font-weight: 500;
+}
+
+.desc {
+  border: 1px black solid;
+}
+
+.tr-1 {
+  background: url(../../data/train-trip/trip-1/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.tr-2 {
+  background: url(../../data/train-trip/trip-2/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.tr-3 {
+  background: url(../../data/train-trip/trip-3/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.tr-4 {
+  background: url(../../data/train-trip/trip-4/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.tr-5 {
+  background: url(../../data/train-trip/trip-5/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.tr-6 {
+  background: url(../../data/train-trip/trip-6/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.tr-7 {
+  background: url(../../data/train-trip/trip-7/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.tr-8 {
+  background: url(../../data/train-trip/trip-8/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+
+.spd-1 {
+  background: url(../../data/speed-hack-trip/trip-1/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+
+.spd-2 {
+  background: url(../../data/speed-hack-trip/trip-2/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+
+.road-1 {
+  background: url(../../data/no-road-trip/trip-1/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.road-2 {
+  background: url(../../data/no-road-trip/trip-2/trip.png) !important;
+  background-position: 20px 20px;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.road-3 {
+  background: url(../../data/no-road-trip/trip-3/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.road-4 {
+  background: url(../../data/no-road-trip/trip-4/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+
+.ecs-1 {
+  background: url(../../data/try-escape-trip/trip-1/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.ecs-2 {
+  background: url(../../data/try-escape-trip/trip-2/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.ecs-3 {
+  background: url(../../data/try-escape-trip/trip-3/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.ecs-4 {
+  background: url(../../data/try-escape-trip/trip-4/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+
+.savag-1 {
+  background: url(../../data/savage-trip/trip-1/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.savag-2 {
+  background: url(../../data/savage-trip/trip-2/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.savag-3 {
+  background: url(../../data/savage-trip/trip-3/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.savag-4 {
+  background: url(../../data/savage-trip/trip-4/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.savag-5 {
+  background: url(../../data/savage-trip/trip-5/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+
+.chill-1 {
+  background: url(../../data/pussy-trip/trip-1/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.chill-2 {
+  background: url(../../data/pussy-trip/trip-2/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.chill-3 {
+  background: url(../../data/pussy-trip/trip-3/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.chill-4 {
+  background: url(../../data/pussy-trip/trip-4/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.chill-5 {
+  background: url(../../data/pussy-trip/trip-5/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}
+.chill-6 {
+  background: url(../../data/pussy-trip/trip-6/trip.png) !important;
+  background-position: center;
+  background-size: contain !important;
+  background-repeat: no-repeat;
+}

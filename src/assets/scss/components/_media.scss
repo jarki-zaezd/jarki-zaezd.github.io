@@ -1,0 +1,17 @@
+@media screen and (max-width: 1000px) {
+  .container {
+    max-width: 760px;
+  }
+}
+
+@media screen and (max-width: 3000px) {
+  .calendar-info {
+    // display: none;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  #stats .canvas-cont {
+    width: 90%;
+  }
+}

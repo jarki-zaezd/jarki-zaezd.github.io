@@ -6,15 +6,15 @@
   background-image: url("../images/sec-1.jpg");
   background-attachment: fixed;
   background-size: cover;
-  background-position: center 50px;
+  background-position: center 0;
   background-repeat: no-repeat;
 
-  .info {
+  .header {
     font-family: "Open Sans", sans-serif;
     text-align: center;
     margin-top: 23%;
 
-    h2 {
+    .header__headline {
       font-size: 42px;
       font-weight: 400;
       letter-spacing: 1.6px;
@@ -22,13 +22,13 @@
       margin-bottom: 30px;
     }
 
-    p {
+    .header__main-description {
       letter-spacing: 1px;
       color: rgb(226, 226, 226);
       margin-bottom: 40px;
     }
 
-    a {
+    .header__explore-link {
       font-size: 20px;
       color: white;
       background: rgb(68, 112, 68);
