@@ -1,5 +1,5 @@
 const TIME_MOVE_MS = 800;
-const NAVBAR_HEIGHT = $("nav").outerHeight() ? $("nav").outerHeight() : 0;
+const NAVBAR_HEIGHT = $(".fixed-top").outerHeight() ? $(".fixed-top").outerHeight() : 0;
 
 $("#home a").click(function(ev) {
   let sectionID = $(this).attr("href"),

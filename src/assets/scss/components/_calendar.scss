@@ -1,7 +1,6 @@
 #calendar {
   position: relative;
   min-height: 100vh !important;
-  padding-bottom: 60px;
 
   .small-calendar {
     display: flex;
@@ -42,6 +41,7 @@
     display: flex;
     flex-direction: column;
     width: 84%;
+    margin-right: 20px;
 
     table,
     th,
@@ -50,7 +50,7 @@
     }
 
     table {
-      height: 88vh;
+      height: 94vh;
     }
 
     thead tr {
@@ -268,7 +268,7 @@
   position: relative;
   width: 94%;
   margin: 2px 0;
-  height: 20%;
+  height: 17%;
   background-color: #dc3545;
   border-radius: 5px;
   color: #fff;

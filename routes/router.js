@@ -9,6 +9,14 @@ router.get("/", function(req, res) {
   res.sendFile(path.resolve(__dirname + "/../index.html"));
 });
 
+router.get("/trips", function(req, res) {
+  res.sendFile(path.resolve(__dirname + "/../tripChoose.html"));
+});
+
+router.get("/statistic", function(req, res) {
+  res.sendFile(path.resolve(__dirname + "/../tripStat.html"));
+});
+
 router.post("/createEvent", function(req, res, next) {
   Event.create(req.body, function(error) {
     if (error) {
