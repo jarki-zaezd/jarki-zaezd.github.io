@@ -2,7 +2,7 @@ function appendTripList(data, $container) {
   for (let i = 0; i < data.length; i++) {
     $container.append(
       `
-        <div class="trip-item">
+        <div class="trip-item" data-trip=${data[i].id}>
             <img src="${data[i].picture}" alt="" srcset="">
             <div class="info-container">
                 <header>
@@ -23,6 +23,14 @@ function appendTripList(data, $container) {
   }
 }
 
+function clickRedirectionEvent($cardItem, currentPath) {
+  console.log([...$cardItem]);
+  $cardItem.click(function() {
+    let path = $(this).data("trip");
+    window.location.href = currentPath + "/" + path;
+  });
+}
+
 let currentPath = window.location.pathname,
   typeInPath = currentPath.split("/")[2],
   tripType = { type: typeInPath };
@@ -32,9 +40,13 @@ $.ajax({
   method: "POST",
   data: tripType,
   success: function(data) {
-    console.log(data);
-    let $tripListContainer = $(".row");
+    let $tripListContainer = $(".row"),
+      currentPath = window.location.pathname;
+
     appendTripList(data, $tripListContainer);
+
+    let $cardItem = $(".trip-item");
+    clickRedirectionEvent($cardItem, currentPath);
   },
   error: function(xhr, ajaxOptions, thrownError) {
     console.log(xhr.status);

@@ -83,4 +83,17 @@ router.post("/getTripsForType", function(req, res, next) {
   });
 });
 
+router.post("/getTripsForId", function(req, res, next) {
+  let tripId = req.body.id;
+
+  Trip.findOne({ id: tripId }, function(error, trip) {
+    if (error) {
+      return next(error);
+    } else if (!trip) {
+      return next(new Error("trips not found"));
+    }
+    res.send(trip);
+  });
+});
+
 module.exports = router;

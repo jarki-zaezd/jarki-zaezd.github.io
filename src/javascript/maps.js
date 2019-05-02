@@ -1,9 +1,27 @@
 var map;
-function initMap() {
+
+let currentPath = window.location.pathname,
+  idInPath = currentPath.split("/")[3],
+  tripId = { id: idInPath };
+
+$.ajax({
+  url: "/getTripsForId",
+  method: "POST",
+  data: tripId,
+  success: function(data) {
+    console.log(data);
+    initMap(data);
+  },
+  error: function(xhr, ajaxOptions, thrownError) {
+    console.log(xhr.status);
+    console.log(thrownError);
+  }
+});
+function initMap(data) {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 55.14423, lng: 27.6196 },
-    zoom: 16
-    // mapTypeId: 'satellite'
+    zoom: 16,
+    mapTypeId: "satellite"
   });
 
   var directionsService = new google.maps.DirectionsService();
@@ -266,13 +284,11 @@ function initMap() {
 
   // map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 
-  let points = [
-      { lat: 55.156635, lng: 27.619375 },
-      { lat: 55.176806, lng: 27.563773 },
-      { lat: 55.149101, lng: 27.552846 }
-    ],
-    start = { lat: 55.140116, lng: 27.672326 };
-  end = { lat: 55.140116, lng: 27.672326 };
+  let dataPoints = data.firstRoute.slice(1, data.firstRoute.length - 1);
+  console.log(dataPoints);
+  let points = data.firstRoute.slice(1, data.firstRoute.length - 1),
+    start = data.firstRoute[0],
+    end = data.firstRoute[data.firstRoute.length - 1];
 
   function calculateAndDisplayRoute(
     directionsService,
@@ -313,34 +329,26 @@ function initMap() {
       }
     );
   }
-  // calculateAndDisplayRoute(
-  //   directionsService,
-  //   directionsDisplay,
-  //   start,
-  //   end,
-  //   points
-  // );
-  // let start2 = { lat: 55.144227, lng: 27.506352 },
-  //   end2 = { lat: 55.140116, lng: 27.672326 };
+  calculateAndDisplayRoute(
+    directionsService,
+    directionsDisplay,
+    start,
+    end,
+    points
+  );
+  if (data.secondRoute.length > 1) {
+    let start2 = data.secondRoute[0],
+      end2 = data.secondRoute[data.secondRoute.length - 1];
 
-  // calculateAndDisplayRoute(
-  //   directionsService2,
-  //   directionsDisplay2,
-  //   start2,
-  //   end2
-  // );
+    calculateAndDisplayRoute(
+      directionsService2,
+      directionsDisplay2,
+      start2,
+      end2
+    );
+  }
 
-  var flightPlanCoordinates = [
-    { lat: 55.133514, lng: 27.671614 },
-    { lat: 55.133546, lng: 27.671636 },
-    { lat: 55.133627, lng: 27.671489 },
-    { lat: 55.133639, lng: 27.671154 },
-    { lat: 55.133696, lng: 27.671141 },
-    { lat: 55.133721, lng: 27.671466 },
-    { lat: 55.133345, lng: 27.672394 },
-    { lat: 55.133313, lng: 27.672356 },
-    { lat: 55.133483, lng: 27.67168 }
-  ];
+  var flightPlanCoordinates = data.polygon;
 
   var flightPath = new google.maps.Polyline({
     path: flightPlanCoordinates,
