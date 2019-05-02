@@ -13,6 +13,10 @@ router.get("/trips", function(req, res) {
   res.sendFile(path.resolve(__dirname + "/../tripChoose.html"));
 });
 
+router.get("/trips/:type", function(req, res) {
+  res.sendFile(path.resolve(__dirname + "/../trips.html"));
+});
+
 router.get("/statistic", function(req, res) {
   res.sendFile(path.resolve(__dirname + "/../tripStat.html"));
 });
@@ -51,4 +55,29 @@ router.post("/setCalendar", function(req, res, next) {
   });
   console.log(1);
 });
+
+router.post("/getTripsForType", function(req, res, next) {
+  let tripType = req.body.type;
+  let bunchOftrips = [];
+
+  Trip.find({ type: tripType }, function(error, trips) {
+    if (error) {
+      return next(error);
+    } else if (!trips) {
+      return next(new Error("trips not found"));
+    }
+    console.log(trips);
+    for (const prop in trips) {
+      let object = trips[prop];
+      let event = (({ id, name, picture }) => ({
+        id,
+        name,
+        picture
+      }))(object);
+      bunchOftrips.push(event);
+    }
+    res.send(bunchOftrips);
+  });
+});
+
 module.exports = router;

@@ -41,7 +41,7 @@
     display: flex;
     flex-direction: column;
     width: 84%;
-    margin-right: 20px;
+    margin-right: 50px;
 
     table,
     th,
@@ -64,6 +64,15 @@
     tbody th {
       cursor: pointer;
       height: 16.66%;
+
+      // &:hover {
+      //   position: absolute;
+      //   background: black;
+      //   border-radius: 10px;
+      //   min-height: 22%;
+      //   width: 180px;
+      //   transform: translate(-4%, -15%);
+      // }
     }
 
     th {
@@ -268,7 +277,6 @@
   position: relative;
   width: 94%;
   margin: 2px 0;
-  height: 17%;
   background-color: #dc3545;
   border-radius: 5px;
   color: #fff;
@@ -280,8 +288,8 @@
   position: relative;
   width: 94%;
   margin: 2px 0;
-  height: 20%;
   border-radius: 5px;
+  border: 2px black solid;
   background-color: #fff;
   padding-left: 3px;
   font-weight: 500;

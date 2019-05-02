@@ -219,6 +219,7 @@ function changeCalendar(events) {
   let Con = thList.filter(elem => {
     return elem.style.backgroundColor !== "rgb(237, 239, 241)";
   });
+
   events.forEach(element => {
     if (element.year == year && element.month == month) {
       Con.forEach(htmlEl => {
@@ -387,3 +388,16 @@ document.addEventListener("keydown", function(e) {
     }, 1000);
   }
 });
+
+/**
+ *
+ */
+function setOverflowEvents() {
+  let $th = $("table tbody th.current-month");
+
+  // consokle
+}
+
+setTimeout(() => {
+  setOverflowEvents();
+}, 1000);
