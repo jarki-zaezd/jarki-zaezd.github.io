@@ -17,6 +17,10 @@ router.get("/trips/:type", function(req, res) {
   res.sendFile(path.resolve(__dirname + "/../trips.html"));
 });
 
+router.get("/trips/:type/:id", function(req, res) {
+  res.sendFile(path.resolve(__dirname + "/../onetrip.html"));
+});
+
 router.get("/statistic", function(req, res) {
   res.sendFile(path.resolve(__dirname + "/../tripStat.html"));
 });
@@ -66,7 +70,6 @@ router.post("/getTripsForType", function(req, res, next) {
     } else if (!trips) {
       return next(new Error("trips not found"));
     }
-    console.log(trips);
     for (const prop in trips) {
       let object = trips[prop];
       let event = (({ id, name, picture }) => ({

@@ -147,7 +147,7 @@
                         <img src="src/assets/images/gallery-6.jpg" alt="">
                     </div>
                     <div class="card-footer">
-                        <a class='btn btn-danger' href="/trip/speed">Start riding</a>
+                        <a class='btn btn-danger' href="/trips/speed">Start riding</a>
                     </div>
                 </div>
             </div>
@@ -165,11 +165,20 @@
     <script src="src/javascript/weather.class.js"></script>
     <script src="src/javascript/constant.js"></script>
     <script src="./dist/main.js"></script>
-    <script src="./src/javascript/app.js"></script>
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script src="src/javascript/gallery.js"></script>
-    <script src="src/javascript/graph.js"></script>
     <!-- <script src="src/javascript/scrap.js"></script> -->
+    <script>
+    let $cardItem = $(".card");
+    function clickRedirectionEvent($cardItem) {
+        $cardItem.click(function() {
+            let path = $(this).data("trip");
+
+             window.location.href = `/trips/${path}`;
+        });
+    }
+    clickRedirectionEvent($cardItem);
+    </script>
 </body>
 
 </html>

@@ -32,6 +32,7 @@ $.ajax({
   method: "POST",
   data: tripType,
   success: function(data) {
+    console.log(data);
     let $tripListContainer = $(".row");
     appendTripList(data, $tripListContainer);
   },
