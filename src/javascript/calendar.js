@@ -53,7 +53,7 @@ function changeDate(e) {
 
   changeCalendar(events);
   addEvent2();
-
+  setOverflowEvents()
   e.preventDefault();
 }
 
@@ -180,6 +180,7 @@ function setCalendarUserEvents() {
       evLen = events.length;
       changeCalendar(events);
       addEvent2();
+      setOverflowEvents();
     },
     error: function(xhr, ajaxOptions, thrownError) {
       console.log(xhr.status);
@@ -337,6 +338,7 @@ function addNewEventCalendar() {
   events.push(ev);
 
   $(globalTh).append(`<div class='event'><p>${tripName}<p></div>`);
+  setOverflowEvents();
 
   console.log(ev);
   $.ajax({
@@ -393,11 +395,37 @@ document.addEventListener("keydown", function(e) {
  *
  */
 function setOverflowEvents() {
-  let $th = $("table tbody th.current-month");
+  let thList = Array.from($("table tbody th.current-month"));
+  let tripList = [];
+  for (let j = 0; j < thList.length; j++) {
+    let temp = Array.from(thList[j].childNodes);
+    tripList.push([]);
 
-  // consokle
+    for (let i = 0; i < temp.length; i++) {
+      if (temp[i].nodeName != "#text") {
+        if (temp[i].className.includes("event")) tripList[j].push(temp[i]);
+      }
+    }
+  }
+
+  for (let i = 0; i < tripList.length; i++) {
+    if (tripList[i].length >= 4) {
+      let elementToHide = tripList[i].length - 3;
+      for (let j = 0; j < elementToHide; j++) {
+        let len = elementToHide;
+        $(tripList[i][len - 1 - j]).css("display", "none");
+      }
+
+      let removeEx = $(thList[i]).children();
+      for (let i = 0; i < removeEx.length; i++) {
+        if (removeEx[i].className.includes("more")) {
+          $(removeEx[i]).remove();
+        }
+      }
+
+      $(thList[i]).append(
+        `<div class='more'><p>${elementToHide} more<p></div>`
+      );
+    }
+  }
 }
-
-setTimeout(() => {
-  setOverflowEvents();
-}, 1000);

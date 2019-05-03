@@ -1,5 +1,14 @@
 var map;
 
+setTimeout(() => {
+  $(".fog").addClass("animated delay-0.1s slower fadeOut");
+
+  setTimeout(() => {
+    $(".fog").remove();
+  }, 3000);
+
+}, 2000);
+
 let currentPath = window.location.pathname,
   idInPath = currentPath.split("/")[3],
   tripId = { id: idInPath };
@@ -20,8 +29,8 @@ $.ajax({
 function initMap(data) {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 55.14423, lng: 27.6196 },
-    zoom: 16,
-    mapTypeId: "satellite"
+    zoom: 16
+    // mapTypeId: "satellite",
   });
 
   var directionsService = new google.maps.DirectionsService();
