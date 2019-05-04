@@ -22,6 +22,7 @@ $(".next").click(changeDate);
 
 tableObserver(addEvent);
 addEvent();
+addEvent2();
 
 /**
  * update calendar when user choose new month
@@ -52,8 +53,9 @@ function changeDate(e) {
   updateCalendar();
 
   changeCalendar(events);
+  setOverflowEvents();
   addEvent2();
-  setOverflowEvents()
+
   e.preventDefault();
 }
 
@@ -179,8 +181,9 @@ function setCalendarUserEvents() {
       events = [...data];
       evLen = events.length;
       changeCalendar(events);
-      addEvent2();
       setOverflowEvents();
+
+      addEvent2();
     },
     error: function(xhr, ajaxOptions, thrownError) {
       console.log(xhr.status);
@@ -194,7 +197,11 @@ function setCalendarUserEvents() {
  */
 function addEvent() {
   $("tbody th").click(function(event) {
-    if (event.target.className == "event" || event.target.tagName == "P") {
+    if (
+      event.target.className == "event" ||
+      event.target.tagName == "P" ||
+      event.target.className == "more"
+    ) {
       return;
     }
     globalTh = $(this);
@@ -241,8 +248,25 @@ function changeCalendar(events) {
 }
 
 function addEvent2() {
-  $(".event").click(function(event) {
-    $(this).append(`<div class="desc">aa</div>`);
+  $(".more").click(function(event) {
+    console.log("click on more class");
+    let $target = $(this).parent();
+
+    let position = $target.position();
+    $target.css("position", "absolute");
+    $target.css("width", "14%");
+    $target.css("height", "23%");
+
+    $target.css("z-index", 999);
+    $target.css("background", "white");
+    $target.css(
+      "box-shadow",
+      "0 1px 3px 0 rgba(60,64,67,0.302), 0 4px 8px 3px rgba(60,64,67,0.149)"
+    );
+
+    $target.css("border-radius", "10px")
+    $target.css("left", position.left - 24);
+    $target.css("top", position.top - 40);
   });
 }
 
@@ -339,8 +363,8 @@ function addNewEventCalendar() {
 
   $(globalTh).append(`<div class='event'><p>${tripName}<p></div>`);
   setOverflowEvents();
+  addEvent2();
 
-  console.log(ev);
   $.ajax({
     url: "http://localhost:9000/createEvent",
     method: "POST",
