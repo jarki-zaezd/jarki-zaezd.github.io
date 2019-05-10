@@ -23,6 +23,7 @@ $(".next").click(changeDate);
 tableObserver(addEvent);
 addEvent();
 addEvent2();
+closeThContent();
 
 /**
  * update calendar when user choose new month
@@ -200,7 +201,8 @@ function addEvent() {
     if (
       event.target.className == "event" ||
       event.target.tagName == "P" ||
-      event.target.className == "more"
+      event.target.className == "more" ||
+      event.target.className == "fa fa-times"
     ) {
       return;
     }
@@ -212,6 +214,36 @@ function addEvent() {
     $(".choose-trip").addClass("animated delay-0.1s fadeInUp");
 
     $("body").append('<div class="overplay"></div>');
+  });
+}
+
+function closeThContent() {
+  $("tbody th .fa-times").click(function() {
+    let $target = $(this).parent();
+
+    $target.css("position", "relative");
+    $target.css("width", "14.285%;");
+    $target.css("height", "16.66%");
+
+    $target.css("top", "0");
+    $target.css("left", "0");
+    $target.css("box-shadow", "none");
+
+    $target.css("z-index", "auto");
+    $target.css("border-radius", "0px");
+
+    $target.find(".more").css("display", "block");
+
+    let $date = $target.find(".date");
+    $date.css("position", "absolute");
+    $date.css("transform", "translateX(-50%)");
+    $date.css("font-size", "13px");
+    $date.css("margin-top", "0px");
+
+    $target.find(".fa-times").css("display", "none");
+    setOverflowEvents();
+
+    addEvent2();
   });
 }
 
@@ -249,7 +281,6 @@ function changeCalendar(events) {
 
 function addEvent2() {
   $(".more").click(function(event) {
-    console.log("click on more class");
     let $target = $(this).parent();
 
     let position = $target.position();
@@ -264,9 +295,33 @@ function addEvent2() {
       "0 1px 3px 0 rgba(60,64,67,0.302), 0 4px 8px 3px rgba(60,64,67,0.149)"
     );
 
-    $target.css("border-radius", "10px")
+    $target.css("border-radius", "10px");
     $target.css("left", position.left - 24);
     $target.css("top", position.top - 40);
+
+    let $date = $target.find(".date");
+    $date.css("position", "relative");
+    $date.css("transform", "translateX(-2%)");
+    $date.css("font-size", "20px");
+    $date.css("margin-top", "8px");
+
+    let $more = $target.find(".more");
+    $more.css("display", "none");
+
+    let $events = $target.find(".event"),
+      eventNumber = $events.length;
+    let height = 17;
+    height += (eventNumber - 4) * 3;
+    $target.css("height", `${height}%`);
+
+    for (let i = 0; i < $events.length; i++) {
+      $events.css("display", "block");
+      $events.css("margin-left", "5px");
+    }
+
+    $target.append('<i class="fa fa-times" aria-hidden="true"></i>');
+
+    closeThContent();
   });
 }
 

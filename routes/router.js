@@ -57,7 +57,6 @@ router.post("/setCalendar", function(req, res, next) {
     }
     res.send(bunchOfevents);
   });
-  console.log(1);
 });
 
 router.post("/getTripsForType", function(req, res, next) {

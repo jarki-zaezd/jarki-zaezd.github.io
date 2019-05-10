@@ -49,5 +49,4 @@ $.getJSON('https://whateverorigin.herokuapp.com/get?url=' +
 
             }
         }
-
     });
