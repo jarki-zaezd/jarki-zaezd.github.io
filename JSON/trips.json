@@ -24,7 +24,9 @@
     "markersBestResult": ["00:20:45", "01:20:19", "02:08:11", "02:34:11"],
     "bestTime": "02:34:11",
     "lastTime": "03:04:09",
-    "distance": "29350m"
+    "pastTravelCount": 230,
+    "difficulty": "15%",
+    "distance": "9240m"
   },
   {
     "id": 2,
@@ -46,7 +48,9 @@
     "markersBestResult": ["00:14:11", "01:20:15"],
     "bestTime": "01:20:15",
     "lastTime": "01:45:59",
-    "distance": "29350m"
+    "pastTravelCount": 14,
+    "difficulty": "11%",
+    "distance": "8350m"
   },
   {
     "id": 3,
@@ -68,7 +72,9 @@
     "markersBestResult": ["00:14:11", "01:20:15"],
     "bestTime": "01:20:15",
     "lastTime": "01:45:59",
-    "distance": "29350m"
+    "pastTravelCount": 95,
+    "difficulty": "19%",
+    "distance": "5030m"
   },
   {
     "id": 4,
@@ -94,7 +100,9 @@
     "markersBestResult": ["00:14:11", "01:20:15"],
     "bestTime": "01:20:15",
     "lastTime": "01:45:59",
-    "distance": "29350m"
+    "pastTravelCount": 63,
+    "difficulty": "21%",
+    "distance": "10200m"
   },
   {
     "id": 5,
@@ -128,7 +136,9 @@
     "markersBestResult": ["00:12:45", "01:11:45", "01:44:16"],
     "bestTime": "01:44:16",
     "lastTime": "02:14:19",
-    "distance": "29350m"
+    "pastTravelCount": 11,
+    "difficulty": "24%",
+    "distance": "11300m"
   },
   {
     "id": 6,
@@ -176,7 +186,9 @@
     "markersBestResult": ["00:12:45", "01:11:45", "01:44:16"],
     "bestTime": "01:44:16",
     "lastTime": "02:14:19",
-    "distance": "29350m"
+    "pastTravelCount": 512,
+    "difficulty": "17%",
+    "distance": "8950m"
   },
 
   {
@@ -201,7 +213,9 @@
     "markersBestResult": ["00:12:45", "01:11:45", "01:44:16"],
     "bestTime": "01:44:16",
     "lastTime": "02:14:19",
-    "distance": "29350m"
+    "pastTravelCount": 30,
+    "difficulty": "39%",
+    "distance": "19350m"
   },
   {
     "id": 8,
@@ -227,7 +241,9 @@
     "markersBestResult": ["00:20:45", "01:20:19", "02:08:11", "02:34:11"],
     "bestTime": "02:34:11",
     "lastTime": "03:04:09",
-    "distance": "29350m"
+    "pastTravelCount": 45,
+    "difficulty": "45%",
+    "distance": "15100m"
   },
   {
     "id": 9,
@@ -253,7 +269,9 @@
     "markersBestResult": ["00:20:45", "01:20:19", "02:08:11", "02:34:11"],
     "bestTime": "02:34:11",
     "lastTime": "03:04:09",
-    "distance": "29350m"
+    "pastTravelCount": 1,
+    "difficulty": "44%",
+    "distance": "21900m"
   },
   {
     "id": 10,
@@ -301,7 +319,9 @@
     "markersBestResult": ["00:12:45", "01:11:45", "01:44:16"],
     "bestTime": "01:44:16",
     "lastTime": "02:14:19",
-    "distance": "29350m"
+    "pastTravelCount": 603,
+    "difficulty": "38%",
+    "distance": "18300m"
   },
   {
     "id": 11,
@@ -335,7 +355,9 @@
     "markersBestResult": ["00:12:45", "01:11:45", "01:44:16"],
     "bestTime": "01:44:16",
     "lastTime": "02:14:19",
-    "distance": "29350m"
+    "pastTravelCount": 14,
+    "difficulty": "39%",
+    "distance": "11800m"
   },
 
   {
@@ -384,7 +406,9 @@
     "markersBestResult": ["00:12:45", "01:11:45", "01:44:16", "03:14:15"],
     "bestTime": "03:14:15",
     "lastTime": "04:11:15",
-    "distance": "29350m"
+    "pastTravelCount": 155,
+    "difficulty": "65%",
+    "distance": "14500m"
   },
   {
     "id": 13,
@@ -432,7 +456,9 @@
     "markersBestResult": ["00:12:45", "01:11:45", "01:44:16", "03:14:15"],
     "bestTime": "03:14:15",
     "lastTime": "04:11:15",
-    "distance": "29350m"
+    "pastTravelCount": 500,
+    "difficulty": "69%",
+    "distance": "13330m"
   },
   {
     "id": 14,
@@ -458,7 +484,9 @@
     "markersBestResult": ["00:12:45", "01:11:45", "01:44:16", "03:14:15"],
     "bestTime": "03:14:15",
     "lastTime": "04:11:15",
-    "distance": "29350m"
+    "pastTravelCount": 320,
+    "difficulty": "73%",
+    "distance": "17350m"
   },
   {
     "id": 15,
@@ -482,7 +510,9 @@
     "markersBestResult": ["00:12:45", "01:11:45", "01:44:16"],
     "bestTime": "01:44:16",
     "lastTime": "04:11:15",
-    "distance": "29350m"
+    "pastTravelCount": 140,
+    "difficulty": "88%",
+    "distance": "28350m"
   },
 
   {
@@ -504,7 +534,9 @@
     "markersBestResult": ["00:14:11", "01:20:15"],
     "bestTime": "01:20:15",
     "lastTime": "01:45:59",
-    "distance": "29350m"
+    "pastTravelCount": 210,
+    "difficulty": "84%",
+    "distance": "29980m"
   },
   {
     "id": 17,
@@ -527,7 +559,9 @@
     "markersBestResult": ["00:14:11", "01:20:15"],
     "bestTime": "01:20:15",
     "lastTime": "01:45:59",
-    "distance": "29350m"
+    "pastTravelCount": 314,
+    "difficulty": "93%",
+    "distance": "31150m"
   },
   {
     "id": 18,
@@ -548,7 +582,9 @@
     "markersBestResult": ["00:14:11", "01:20:15"],
     "bestTime": "01:20:15",
     "lastTime": "01:45:59",
-    "distance": "29350m"
+    "pastTravelCount": 12,
+    "difficulty": "97%",
+    "distance": "32900m"
   },
   {
     "id": 19,
@@ -569,7 +605,9 @@
     "markersBestResult": ["00:14:11", "01:20:15"],
     "bestTime": "01:20:15",
     "lastTime": "01:45:59",
-    "distance": "29350m"
+    "pastTravelCount": 93,
+    "difficulty": "59%",
+    "distance": "15350m"
   },
   {
     "id": 20,
@@ -590,7 +628,9 @@
     "markersBestResult": ["00:14:11", "01:20:15"],
     "bestTime": "01:20:15",
     "lastTime": "01:45:59",
-    "distance": "29350m"
+    "pastTravelCount": 48,
+    "difficulty": "91%",
+    "distance": "34500m"
   },
   {
     "id": 21,
@@ -611,7 +651,9 @@
     "markersBestResult": ["00:14:11", "01:20:15"],
     "bestTime": "01:20:15",
     "lastTime": "01:45:59",
-    "distance": "29350m"
+    "pastTravelCount": 98,
+    "difficulty": "84%",
+    "distance": "20350m"
   },
   {
     "id": 22,
@@ -632,7 +674,9 @@
     "markersBestResult": ["00:14:11", "01:20:15"],
     "bestTime": "01:20:15",
     "lastTime": "01:45:59",
-    "distance": "29350m"
+    "pastTravelCount": 91,
+    "difficulty": "79%",
+    "distance": "33110m"
   },
   {
     "id": 23,
@@ -653,7 +697,9 @@
     "markersBestResult": ["00:14:11", "01:20:15"],
     "bestTime": "01:20:15",
     "lastTime": "01:45:59",
-    "distance": "29350m"
+    "pastTravelCount": 12,
+    "difficulty": "73%",
+    "distance": "28400m"
   },
 
   {
@@ -680,6 +726,8 @@
     "markersBestResult": ["00:12:45", "01:11:45", "01:44:16", "03:14:15"],
     "bestTime": "03:14:15",
     "lastTime": "04:11:15",
+    "pastTravelCount": 69,
+    "difficulty": "92%",
     "distance": "29350m"
   },
   {
@@ -712,7 +760,9 @@
     "markersBestResult": ["00:12:45", "01:11:45", "03:14:15"],
     "bestTime": "03:14:15",
     "lastTime": "04:11:15",
-    "distance": "29350m"
+    "pastTravelCount": 83,
+    "difficulty": "95%",
+    "distance": "26600m"
   },
   {
     "id": 26,
@@ -738,7 +788,9 @@
     "markersBestResult": ["00:12:45", "01:11:45", "01:44:16", "03:14:15"],
     "bestTime": "03:14:15",
     "lastTime": "04:11:15",
-    "distance": "29350m"
+    "pastTravelCount": 15,
+    "difficulty": "92%",
+    "distance": "24550m"
   },
   {
     "id": 27,
@@ -764,7 +816,9 @@
     "markersBestResult": ["00:12:45", "01:11:45", "01:44:16", "03:14:15"],
     "bestTime": "03:14:15",
     "lastTime": "04:11:15",
-    "distance": "29350m"
+    "pastTravelCount": 114,
+    "difficulty": "63%",
+    "distance": "21350m"
   },
 
   {
@@ -787,7 +841,9 @@
     "markersBestResult": [],
     "bestTime": "00:01:19",
     "lastTime": "00:01:24",
-    "distance": "29350m"
+    "pastTravelCount": 539,
+    "difficulty": "100%",
+    "distance": "200m"
   },
   {
     "id": 29,
@@ -812,6 +868,8 @@
     "markersBestResult": [],
     "bestTime": "00:01:19",
     "lastTime": "00:02:35",
-    "distance": "29350m"
+    "pastTravelCount": 1216,
+    "difficulty": "100%",
+    "distance": "220m"
   }
 ]

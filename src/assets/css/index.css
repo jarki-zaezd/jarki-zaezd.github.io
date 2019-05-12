@@ -705,6 +705,30 @@ html {
     transform: translate3d(0, 0, 0); }
   100% {
     transform: translate3d(-200vw, 0, 0); } }
+.flex-c {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap; }
+  .flex-c .differece {
+    height: 35px;
+    width: 50%; }
+  .flex-c p {
+    position: absolute;
+    color: white;
+    bottom: 9px;
+    letter-spacing: 0.4px; }
+  .flex-c .difference-1 {
+    background: linear-gradient(69deg, #d24067 5%, #e88333 40%); }
+  .flex-c .difference-2 {
+    background: linear-gradient(69deg, #2fcef9 5%, #2854d6 43%, #7321b2 79%, #f73169 100%); }
+
+svg {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  right: 0;
+  top: -1px; }
+
 .app {
   position: absolute;
   top: 0%;

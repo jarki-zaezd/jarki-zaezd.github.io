@@ -52,6 +52,14 @@ const TripSchema = new mongoose.Schema({
     type: String,
     trim: true
   },
+  pastTravelCount: {
+    type: Number,
+    required: true
+  },
+  difficulty: {
+    type: String,
+    required: true
+  },
   distance: {
     type: String
   }

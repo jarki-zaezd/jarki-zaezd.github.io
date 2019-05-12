@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 let app = express();
 const port = 9000;
 
-mongoose.connect("mongodb://localhost:27017/test-7", {
+mongoose.connect("mongodb://localhost:27017/test-8", {
   useNewUrlParser: true
 });
 const db = mongoose.connection;
