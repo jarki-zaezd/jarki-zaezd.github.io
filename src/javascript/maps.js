@@ -1330,8 +1330,6 @@ function initMap(data) {
     });
   }
 
-  
-
   var directionsService = new google.maps.DirectionsService();
   var directionsService2 = new google.maps.DirectionsService();
 
@@ -1570,12 +1568,28 @@ function initMap(data) {
   //     }
   //   }
   // ];
-  function setMarker(position, content) {
+
+  let markerNumber = data.markers.length;
+  for (let i = 0; i < markerNumber; i++) {
+    setMarker(
+      data.markers[i],
+      data.markersBestResult[i],
+      data.markersBestTrip[i],
+      i
+    );
+  }
+  function setMarker(position, markerBest, markerBestTrip, index) {
+    let url = "";
+    if (index == data.markers.length - 1) {
+      url =
+        "http://icons.iconarchive.com/icons/icons8/ios7/512/Sports-Finish-Flag-icon.png";
+    } else {
+      url = "https://cdn.onlinewebfonts.com/svg/img_498180.png";
+    }
     let iconProp = {
       position: position,
       icon: {
-        url:
-          "http://icons.iconarchive.com/icons/icons8/ios7/512/Sports-Finish-Flag-icon.png",
+        url: url,
         scaledSize: new google.maps.Size(40, 40)
       }
     };
@@ -1585,7 +1599,10 @@ function initMap(data) {
       optimized: false,
       map: map
     });
-
+    let content = `
+        <p>${markerBestTrip}</p>
+        <p>${markerBest}</p>
+    `;
     var infoWindow = new google.maps.InfoWindow({
       content: content
     });
@@ -1594,10 +1611,6 @@ function initMap(data) {
       infoWindow.open(map, marker);
     });
   }
-  setMarker({ lat: 55.173637, lng: 27.6562007 }, "01:00:13");
-  setMarker({ lat: 55.179067, lng: 27.725003 }, "01:50:18");
-  setMarker({ lat: 55.152928, lng: 27.754424 }, "02:14:18");
-  setMarker({ lat: 55.140116, lng: 27.672326 }, "02:34:18");
 
   var legend = document.getElementById("legend");
   var div = document.createElement("div");
@@ -1613,7 +1626,7 @@ function initMap(data) {
   map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 
   let dataPoints = data.firstRoute.slice(1, data.firstRoute.length - 1);
-  console.log(dataPoints);
+
   let points = data.firstRoute.slice(1, data.firstRoute.length - 1),
     start = data.firstRoute[0],
     end = data.firstRoute[data.firstRoute.length - 1];

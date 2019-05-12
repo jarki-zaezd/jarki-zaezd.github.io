@@ -14,8 +14,16 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.1458168, "lng": 27.6308895 },
+      { "lat": 55.1523454, "lng": 27.6207906 },
+      { "lat": 55.144429, "lng": 27.617639 },
+      { "lat": 55.1401348, "lng": 27.6718545 }
+    ],
+    "markersBestTrip": ["00:20:45", "01:20:19", "02:10:15", "02:34:11"],
+    "markersBestResult": ["00:20:45", "01:20:19", "02:08:11", "02:34:11"],
+    "bestTime": "02:34:11",
+    "lastTime": "03:04:09",
     "distance": "29350m"
   },
   {
@@ -30,8 +38,14 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.150962, "lng": 27.652105 },
+      { "lat": 55.1401338, "lng": 27.6717605 }
+    ],
+    "markersBestTrip": ["00:20:45", "01:20:15"],
+    "markersBestResult": ["00:14:11", "01:20:15"],
+    "bestTime": "01:20:15",
+    "lastTime": "01:45:59",
     "distance": "29350m"
   },
   {
@@ -46,8 +60,14 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.152415, "lng": 27.6432 },
+      { "lat": 55.1401338, "lng": 27.6717605 }
+    ],
+    "markersBestTrip": ["00:20:45", "01:20:15"],
+    "markersBestResult": ["00:14:11", "01:20:15"],
+    "bestTime": "01:20:15",
+    "lastTime": "01:45:59",
     "distance": "29350m"
   },
   {
@@ -66,8 +86,14 @@
       { "lat": 55.138968, "lng": 27.668814 },
       { "lat": 55.140102, "lng": 27.672258 }
     ],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.142689, "lng": 27.644977 },
+      { "lat": 55.140102, "lng": 27.672258 }
+    ],
+    "markersBestTrip": ["00:20:45", "01:20:15"],
+    "markersBestResult": ["00:14:11", "01:20:15"],
+    "bestTime": "01:20:15",
+    "lastTime": "01:45:59",
     "distance": "29350m"
   },
   {
@@ -93,8 +119,15 @@
       { "lat": 55.139925, "lng": 27.61918 },
       { "lat": 55.144266, "lng": 27.620822 }
     ],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.132476, "lng": 27.629894 },
+      { "lat": 55.144256, "lng": 27.620841 },
+      { "lat": 55.1401338, "lng": 27.6717605 }
+    ],
+    "markersBestTrip": ["00:13:45", "01:12:14", "01:44:16"],
+    "markersBestResult": ["00:12:45", "01:11:45", "01:44:16"],
+    "bestTime": "01:44:16",
+    "lastTime": "02:14:19",
     "distance": "29350m"
   },
   {
@@ -134,8 +167,15 @@
       { "lat": 55.132875, "lng": 27.671505 },
       { "lat": 55.13401, "lng": 27.670893 }
     ],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.126283, "lng": 27.621099 },
+      { "lat": 55.13401, "lng": 27.670893 },
+      { "lat": 55.1401338, "lng": 27.6717605 }
+    ],
+    "markersBestTrip": ["00:13:45", "01:12:14", "01:44:16"],
+    "markersBestResult": ["00:12:45", "01:11:45", "01:44:16"],
+    "bestTime": "01:44:16",
+    "lastTime": "02:14:19",
     "distance": "29350m"
   },
 
@@ -152,8 +192,15 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.140537, "lng": 27.581542 },
+      { "lat": 55.117808, "lng": 27.589855 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "markersBestTrip": ["00:13:45", "01:12:14", "01:44:16"],
+    "markersBestResult": ["00:12:45", "01:11:45", "01:44:16"],
+    "bestTime": "01:44:16",
+    "lastTime": "02:14:19",
     "distance": "29350m"
   },
   {
@@ -170,8 +217,16 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.156635, "lng": 27.619375 },
+      { "lat": 55.176806, "lng": 27.563773 },
+      { "lat": 55.149101, "lng": 27.552846 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "markersBestTrip": ["00:20:45", "01:20:19", "02:10:15", "02:34:11"],
+    "markersBestResult": ["00:20:45", "01:20:19", "02:08:11", "02:34:11"],
+    "bestTime": "02:34:11",
+    "lastTime": "03:04:09",
     "distance": "29350m"
   },
   {
@@ -188,8 +243,16 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.121002, "lng": 27.605627 },
+      { "lat": 55.110663, "lng": 27.616828 },
+      { "lat": 55.118039, "lng": 27.670563 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "markersBestTrip": ["00:20:45", "01:20:19", "02:10:15", "02:34:11"],
+    "markersBestResult": ["00:20:45", "01:20:19", "02:08:11", "02:34:11"],
+    "bestTime": "02:34:11",
+    "lastTime": "03:04:09",
     "distance": "29350m"
   },
   {
@@ -229,8 +292,15 @@
       { "lat": 55.132875, "lng": 27.671505 },
       { "lat": 55.13401, "lng": 27.670893 }
     ],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.126283, "lng": 27.621099 },
+      { "lat": 55.13401, "lng": 27.670893 },
+      { "lat": 55.1401338, "lng": 27.6717605 }
+    ],
+    "markersBestTrip": ["00:13:45", "01:12:14", "01:44:16"],
+    "markersBestResult": ["00:12:45", "01:11:45", "01:44:16"],
+    "bestTime": "01:44:16",
+    "lastTime": "02:14:19",
     "distance": "29350m"
   },
   {
@@ -256,8 +326,15 @@
       { "lat": 55.139925, "lng": 27.61918 },
       { "lat": 55.144266, "lng": 27.620822 }
     ],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.132476, "lng": 27.629894 },
+      { "lat": 55.144256, "lng": 27.620841 },
+      { "lat": 55.1401338, "lng": 27.6717605 }
+    ],
+    "markersBestTrip": ["00:13:45", "01:12:14", "01:44:16"],
+    "markersBestResult": ["00:12:45", "01:11:45", "01:44:16"],
+    "bestTime": "01:44:16",
+    "lastTime": "02:14:19",
     "distance": "29350m"
   },
 
@@ -297,8 +374,16 @@
       { "lat": 55.194441, "lng": 27.633111 },
       { "lat": 55.194671, "lng": 27.634769 }
     ],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.184259, "lng": 27.59436 },
+      { "lat": 55.184259, "lng": 27.59436 },
+      { "lat": 55.194671, "lng": 27.634769 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "markersBestTrip": ["00:13:45", "01:12:14", "01:44:16", "03:14:15"],
+    "markersBestResult": ["00:12:45", "01:11:45", "01:44:16", "03:14:15"],
+    "bestTime": "03:14:15",
+    "lastTime": "04:11:15",
     "distance": "29350m"
   },
   {
@@ -337,8 +422,16 @@
       { "lat": 55.194441, "lng": 27.633111 },
       { "lat": 55.194671, "lng": 27.634769 }
     ],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.149097, "lng": 27.552748 },
+      { "lat": 55.184259, "lng": 27.59436 },
+      { "lat": 55.194671, "lng": 27.634769 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "markersBestTrip": ["00:13:45", "01:12:14", "01:44:16", "03:14:15"],
+    "markersBestResult": ["00:12:45", "01:11:45", "01:44:16", "03:14:15"],
+    "bestTime": "03:14:15",
+    "lastTime": "04:11:15",
     "distance": "29350m"
   },
   {
@@ -355,8 +448,16 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.173637, "lng": 27.6562007 },
+      { "lat": 55.179067, "lng": 27.725003 },
+      { "lat": 55.152928, "lng": 27.754424 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "markersBestTrip": ["00:13:45", "01:12:14", "01:44:16", "03:14:15"],
+    "markersBestResult": ["00:12:45", "01:11:45", "01:44:16", "03:14:15"],
+    "bestTime": "03:14:15",
+    "lastTime": "04:11:15",
     "distance": "29350m"
   },
   {
@@ -372,8 +473,15 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.140537, "lng": 27.581542 },
+      { "lat": 55.117808, "lng": 27.589855 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "markersBestTrip": ["00:13:45", "01:12:14", "01:44:16"],
+    "markersBestResult": ["00:12:45", "01:11:45", "01:44:16"],
+    "bestTime": "01:44:16",
+    "lastTime": "04:11:15",
     "distance": "29350m"
   },
 
@@ -388,8 +496,14 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.131541, "lng": 27.50469 },
+      { "lat": 55.140106, "lng": 27.672374 }
+    ],
+    "markersBestTrip": ["00:20:45", "01:20:15"],
+    "markersBestResult": ["00:14:11", "01:20:15"],
+    "bestTime": "01:20:15",
+    "lastTime": "01:45:59",
     "distance": "29350m"
   },
   {
@@ -404,8 +518,15 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.14947, "lng": 27.377256 },
+      { "lat": 55.094033, "lng": 27.398867 },
+      { "lat": 55.140125, "lng": 27.672401 }
+    ],
+    "markersBestTrip": ["00:20:45", "01:20:15"],
+    "markersBestResult": ["00:14:11", "01:20:15"],
+    "bestTime": "01:20:15",
+    "lastTime": "01:45:59",
     "distance": "29350m"
   },
   {
@@ -419,8 +540,14 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.032147, "lng": 27.77743 },
+      { "lat": 55.140125, "lng": 27.672401 }
+    ],
+    "markersBestTrip": ["00:20:45", "01:20:15"],
+    "markersBestResult": ["00:14:11", "01:20:15"],
+    "bestTime": "01:20:15",
+    "lastTime": "01:45:59",
     "distance": "29350m"
   },
   {
@@ -434,8 +561,14 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.151788, "lng": 27.926319 },
+      { "lat": 55.140125, "lng": 27.672401 }
+    ],
+    "markersBestTrip": ["00:20:45", "01:20:15"],
+    "markersBestResult": ["00:14:11", "01:20:15"],
+    "bestTime": "01:20:15",
+    "lastTime": "01:45:59",
     "distance": "29350m"
   },
   {
@@ -449,8 +582,14 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.266382, "lng": 27.913685 },
+      { "lat": 55.140125, "lng": 27.672401 }
+    ],
+    "markersBestTrip": ["00:20:45", "01:20:15"],
+    "markersBestResult": ["00:14:11", "01:20:15"],
+    "bestTime": "01:20:15",
+    "lastTime": "01:45:59",
     "distance": "29350m"
   },
   {
@@ -464,8 +603,14 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.243172, "lng": 27.555897 },
+      { "lat": 55.140125, "lng": 27.672401 }
+    ],
+    "markersBestTrip": ["00:20:45", "01:20:15"],
+    "markersBestResult": ["00:14:11", "01:20:15"],
+    "bestTime": "01:20:15",
+    "lastTime": "01:45:59",
     "distance": "29350m"
   },
   {
@@ -479,8 +624,14 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.032513, "lng": 27.648146 },
+      { "lat": 55.140125, "lng": 27.672401 }
+    ],
+    "markersBestTrip": ["00:20:45", "01:20:15"],
+    "markersBestResult": ["00:14:11", "01:20:15"],
+    "bestTime": "01:20:15",
+    "lastTime": "01:45:59",
     "distance": "29350m"
   },
   {
@@ -494,8 +645,14 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.167332, "lng": 27.673947 },
+      { "lat": 55.140125, "lng": 27.672401 }
+    ],
+    "markersBestTrip": ["00:20:45", "01:20:15"],
+    "markersBestResult": ["00:14:11", "01:20:15"],
+    "bestTime": "01:20:15",
+    "lastTime": "01:45:59",
     "distance": "29350m"
   },
 
@@ -513,8 +670,16 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.173637, "lng": 27.6562007 },
+      { "lat": 55.179067, "lng": 27.725003 },
+      { "lat": 55.152928, "lng": 27.754424 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "markersBestTrip": ["00:13:45", "01:12:14", "01:44:16", "03:14:15"],
+    "markersBestResult": ["00:12:45", "01:11:45", "01:44:16", "03:14:15"],
+    "bestTime": "03:14:15",
+    "lastTime": "04:11:15",
     "distance": "29350m"
   },
   {
@@ -538,8 +703,15 @@
       { "lat": 55.149561, "lng": 27.512081 },
       { "lat": 55.144227, "lng": 27.506352 }
     ],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.157407, "lng": 27.51089 },
+      { "lat": 55.144227, "lng": 27.506352 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "markersBestTrip": ["00:13:45", "01:12:14", "03:14:15"],
+    "markersBestResult": ["00:12:45", "01:11:45", "03:14:15"],
+    "bestTime": "03:14:15",
+    "lastTime": "04:11:15",
     "distance": "29350m"
   },
   {
@@ -556,8 +728,16 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.161061, "lng": 27.500279 },
+      { "lat": 55.20872, "lng": 27.615587 },
+      { "lat": 55.175211, "lng": 27.657381 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "markersBestTrip": ["00:13:45", "01:12:14", "01:44:16", "03:14:15"],
+    "markersBestResult": ["00:12:45", "01:11:45", "01:44:16", "03:14:15"],
+    "bestTime": "03:14:15",
+    "lastTime": "04:11:15",
     "distance": "29350m"
   },
   {
@@ -574,8 +754,16 @@
     ],
     "secondRoute": [],
     "polygon": [],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [
+      { "lat": 55.156635, "lng": 27.619375 },
+      { "lat": 55.176806, "lng": 27.563773 },
+      { "lat": 55.149101, "lng": 27.552846 },
+      { "lat": 55.140116, "lng": 27.672326 }
+    ],
+    "markersBestTrip": ["00:13:45", "01:12:14", "01:44:16", "03:14:15"],
+    "markersBestResult": ["00:12:45", "01:11:45", "01:44:16", "03:14:15"],
+    "bestTime": "03:14:15",
+    "lastTime": "04:11:15",
     "distance": "29350m"
   },
 
@@ -594,8 +782,11 @@
       { "lat": 55.137457, "lng": 27.67061 },
       { "lat": 55.137032, "lng": 27.670666 }
     ],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [],
+    "markersBestTrip": [],
+    "markersBestResult": [],
+    "bestTime": "00:01:19",
+    "lastTime": "00:01:24",
     "distance": "29350m"
   },
   {
@@ -616,8 +807,11 @@
       { "lat": 55.133313, "lng": 27.672356 },
       { "lat": 55.133483, "lng": 27.67168 }
     ],
-    "bestTime": "2h34m18c",
-    "lastTime": "3h04m09c",
+    "markers": [],
+    "markersBestTrip": [],
+    "markersBestResult": [],
+    "bestTime": "00:01:19",
+    "lastTime": "00:02:35",
     "distance": "29350m"
   }
 ]

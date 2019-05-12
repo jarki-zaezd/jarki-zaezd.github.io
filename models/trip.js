@@ -32,6 +32,18 @@ const TripSchema = new mongoose.Schema({
     type: Array,
     default: []
   },
+  markers: {
+    type: Array,
+    default: []
+  },
+  markersBestTrip: {
+    type: Array,
+    default: []
+  },
+  markersBestResult: {
+    type: Array,
+    default: []
+  },
   bestTime: {
     type: String,
     trim: true
