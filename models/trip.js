@@ -31,6 +31,17 @@ const TripSchema = new mongoose.Schema({
   polygon: {
     type: Array,
     default: []
+  },
+  bestTime: {
+    type: String,
+    trim: true
+  },
+  lastTime: {
+    type: String,
+    trim: true
+  },
+  distance: {
+    type: String
   }
 });
 

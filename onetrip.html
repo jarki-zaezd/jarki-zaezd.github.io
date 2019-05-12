@@ -77,19 +77,47 @@
         padding: 0;
       }
 
-      /* #legend {
+      #legend {
         font-family: Arial, sans-serif;
         background: #fff;
         padding: 10px;
         margin: 10px;
-        border: 3px solid #000;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px 0 rgba(60, 64, 67, 0.302),
+          0 4px 8px 3px rgba(60, 64, 67, 0.149);
+        position: absolute;
+        top: 70px !important;
+        bottom: auto !important;
       }
-      #legend h3 {
-        margin-top: 0;
+      #legend {
+        font-size: 20px;
+        letter-spacing: 1.5px;
       }
-      #legend img {
-        vertical-align: middle;
-      } */
+      .btn {
+        position: absolute;
+        top: 80px;
+        left: 10px;
+        width: 140px;
+      }
+      .light {
+        top: 120px;
+        left: 10px;
+      }
+      .forest {
+        top: 160px;
+      }
+      .aubergine {
+        top: 200px;
+      }
+      .silver {
+        top: 240px;
+      }
+      .assassin {
+        top: 280px;
+      }
+      .gta {
+        top: 320px;
+      }
     </style>
   </head>
 
@@ -101,19 +129,15 @@
       </div>
     </section>
     <div id="map"></div>
-    <div id="legend">
-      <h3>Legend</h3>
-    </div>
-    <section id="trip-info">
-      <div class="container">
-        <div class="row">
-          <div class="info">
-            <p class="totalDist">Total:</p>
-          </div>
-          <div class="charter"></div>
-        </div>
-      </div>
-    </section>
+    <div id="legend"></div>
+    <a href="" class="btn night btn-light">Night mode</a>
+    <a href="" class="btn light btn-light">Light mode</a>
+    <a href="" class="btn forest btn-light">Forest mode</a>
+    <a href="" class="btn aubergine btn-light">Aubergine</a>
+    <a href="" class="btn silver btn-light">Silver</a>
+    <a href="" class="btn assassin btn-light">Assassin's Creed</a>
+    <a href="" class="btn gta btn-light">GTA</a>
+    <script src="../../src/javascript/jquery-3.3.1.min.js"></script>
     <script src="../../src/javascript/maps.js"></script>
     <!-- <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBH2ExjWU2WzkezabgRmb_WIIpnldlhAss&callback=initMap"

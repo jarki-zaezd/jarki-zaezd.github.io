@@ -25,6 +25,10 @@ router.get("/statistic", function(req, res) {
   res.sendFile(path.resolve(__dirname + "/../tripStat.html"));
 });
 
+router.get("/404", function(req, res) {
+  res.sendFile(path.resolve(__dirname + "/../error404.html"));
+});
+
 router.post("/createEvent", function(req, res, next) {
   Event.create(req.body, function(error) {
     if (error) {

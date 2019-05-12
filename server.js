@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 let app = express();
 const port = 9000;
 
-mongoose.connect("mongodb://localhost:27017/test-4", {
+mongoose.connect("mongodb://localhost:27017/test-5", {
   useNewUrlParser: true
 });
 const db = mongoose.connection;
@@ -22,14 +22,14 @@ const tripContent = fs.readFileSync("JSON/trips.json", "utf8");
 const Event = require("./models/event");
 const eventContent = fs.readFileSync("JSON/events.json", "utf8");
 
-// try {
-//   const data = JSON.parse(tripContent);
-//   for (let i = 0; i < data.length; i++) {
-//     Trip.create(data[i], function() {});
-//   }
-// } catch (err) {
-//   console.error(err);
-// }
+try {
+  const data = JSON.parse(tripContent);
+  for (let i = 0; i < data.length; i++) {
+    Trip.create(data[i], function() {});
+  }
+} catch (err) {
+  console.error(err);
+}
 
 try {
   const data = JSON.parse(eventContent);
