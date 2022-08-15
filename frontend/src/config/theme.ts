@@ -20,4 +20,16 @@ export const muiTheme = createMuiTheme({
       main: primaryColor,
     },
   },
+  typography: {
+    fontFamily: [
+      'Ubuntu',
+      'Roboto',
+      '"Helvetica Neue"',
+      'Arial',
+      'sans-serif',
+    ].join(','),
+    fontWeightLight: 300,
+    fontWeightRegular: 400,
+    fontWeightMedium: 500,
+  },
 });

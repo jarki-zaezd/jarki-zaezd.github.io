@@ -2,10 +2,10 @@ import React from 'react';
 import { BrowserRouter, Link } from 'react-router-dom';
 import { ThemeProvider as MuiThemeProvider } from '@mui/material/styles';
 
+import './fonts/index.css';
+
 import Router from './router/Routes';
 import GlobalHeader from './components/GlobalHeader';
-
-import GlobalFonts from './fonts/GlobalFonts';
 
 import { muiTheme } from './config/theme';
 import { publicUrls } from './config';
@@ -13,7 +13,6 @@ import { publicUrls } from './config';
 function App() {
   return (
     <MuiThemeProvider theme={muiTheme}>
-      <GlobalFonts />
       <div className="App">
         <BrowserRouter>
           <GlobalHeader />

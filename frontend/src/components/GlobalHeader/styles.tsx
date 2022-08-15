@@ -1,10 +1,13 @@
+import React from 'react';
 import styled from 'styled-components';
 
-import MuiMenuItem from '@mui/material/MenuItem';
-import MuiButton from '@mui/material/Button';
+import MuiMenuItem, { MenuItemProps } from '@mui/material/MenuItem';
+import MuiButton, { ButtonProps } from '@mui/material/Button';
 import MuiTypography from '@mui/material/Typography';
 import MuiAppBar from '@mui/material/AppBar';
 import MuiToolbar from '@mui/material/Toolbar';
+import MuiMenuList from '@mui/material/MenuList';
+import MuiPaper from '@mui/material/Paper';
 
 import { globalHeaderHeight, lightGray, primaryColor, white } from '../../config/theme';
 
@@ -48,76 +51,97 @@ export const ToolbarItemsWrapper = styled.div`
   margin-left: 20px;
 `;
 
-type MenuButtonProps = {
-  $isOpen: boolean;
-};
-
-export const BaseNavbarButton = styled(MuiButton)`
-  && {
-    height: 100%;
-    background-color: ${white} !important;
-    text-transform: none;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-  }
-`;
-
 export const ToolbarItem = styled(MuiButton)`
   && {
     height: 100%;
     background-color: ${white} !important;
-    color: rgb(70, 70, 80);
+    font-weight: 300;
+    color: rgb(0, 0, 0);
     text-transform: none;
     border-left: 1px solid #fff;
     border-right: 1px solid #fff;
-    border-bottom: 1px solid #fff;
   }
 `;
 
-export const ToolbarItemDropdown = styled(ToolbarItem)<MenuButtonProps>`
+type StyleButtonProps = {
+  $isOpen?: boolean;
+  $isActive: boolean;
+};
+
+type StyleMenuItemProps = {
+  $isActive: boolean;
+};
+
+type ComponentProp<C> = {
+  component?: C
+};
+
+export const ToolbarItemDropdown = styled(ToolbarItem)<StyleButtonProps>`
   && {
-    ${props => props.$isOpen && `
-    color: ${primaryColor};
     border-radius: 0;
-    background-color: ${white};
-    border-left: 1px solid #dfdfe8;
-    border-right: 1px solid #dfdfe8;
-    border-bottom: 1px solid #fff;
+
+    ${props => props.$isActive && `
+      box-shadow: inset 0 -2px 0 0 ${primaryColor} !important;
+      font-weight: 500;
+    `}
+
+    ${props => props.$isOpen && `
+      color: ${primaryColor} !important;
+      background-color: ${white};
+      border-left: 1px solid #dfdfe8;
+      border-right: 1px solid #dfdfe8;
     `}
   }
 `;
 
-export const ToolbarItemLink = styled(ToolbarItem)`
+export const ToolbarItemLinkStyle = styled(ToolbarItem)<StyleButtonProps>`
   && {
+    border-radius: 0;
+
+    ${props => props.$isActive && `
+      box-shadow: inset 0 -2px 0 0 ${primaryColor}  !important;
+      font-weight: 500;
+    `}
+
     padding: 0 12px;
     :hover {
       color: ${primaryColor};
     }
   }
-` as typeof MuiButton;
+`;
 
-export const Button = styled(MuiButton)<MenuButtonProps>`
+export const ToolbarItemLink = <C extends React.ElementType>(
+  props: ButtonProps<C, StyleButtonProps & ComponentProp<C>>,
+) => {
+  return <ToolbarItemLinkStyle {...props} />;
+};
+
+export const Paper = styled(MuiPaper)`
   && {
-    height: 100%;
-    background-color: ${white} !important;
-    text-transform: none;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    border-radius: 0px;
+    width: 160px;
+  }
+`;
 
+export const MenuList = styled(MuiMenuList)`
+  && {
+    padding: 0;
+  }
+`;
 
-    ${props => props.$isOpen && `
-      color: ${primaryColor};
-      border-radius: 0;
-      background-color: ${white};
-      border-left: 1px solid #dfdfe8;
-      border-right: 1px solid #dfdfe8;
-      border-bottom: 1px solid #fff;
+export const MenuItemStyle = styled(MuiMenuItem)<StyleMenuItemProps>`
+  && {
+    height: 46px;
+    font-size: 14px;
+    ${props => props.$isActive && `
+      color: black;
+      font-weight: 700;
     `}
   }
 `;
 
-export const MenuItem = styled(MuiMenuItem)`
-  
-` as typeof MuiMenuItem;
+export const MenuItem = <C extends React.ElementType>(
+  props: MenuItemProps<C, StyleMenuItemProps & ComponentProp<C>>,
+) => {
+  return <MenuItemStyle {...props} />;
+};

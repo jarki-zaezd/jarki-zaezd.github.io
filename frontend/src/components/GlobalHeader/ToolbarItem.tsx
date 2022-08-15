@@ -1,13 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import Grow from '@mui/material/Grow';
-import MenuList from '@mui/material/MenuList';
-import Paper from '@mui/material/Paper';
 import Popper from '@mui/material/Popper';
 
 import { KeyboardArrowDown } from '@mui/icons-material';
-import { ToolbarItemDropdown, ToolbarItemLink, MenuItem } from './styles';
+import { MenuList, Paper, ToolbarItemDropdown, ToolbarItemLink, MenuItem } from './styles';
 
 import { ItemsProps } from '../../constants/headerMenu';
 
@@ -20,19 +18,25 @@ const baseButtonProps = {
   disableTouchRipple: true,
 } as const;
 
-const ToolbarLink = ({ menuTitle, link }: { menuTitle: string; link: string }) => (
-  <ToolbarItemLink
-    {...baseButtonProps}
-    id={`${menuTitle}-link`}
-    component={Link}
-    to={link}
-  >
-    {menuTitle}
-  </ToolbarItemLink>
-);
+const ToolbarLink = ({ menuTitle, link }: { menuTitle: string; link: string }) => {
+  const { pathname } = useLocation();
+
+  return (
+    <ToolbarItemLink
+      {...baseButtonProps}
+      $isActive={pathname === link}
+      id={`${menuTitle}-link`}
+      component={Link}
+      to={link}
+    >
+      {menuTitle}
+    </ToolbarItemLink>
+  );
+};
 
 const ToolbarDropdown = ({ menuTitle, items }: ItemsProps) => {
   const [isOpen, setIsOpen] = React.useState(false);
+  const { pathname } = useLocation();
 
   const toolbarItemRef = React.useRef<HTMLButtonElement>(null);
   const dropdownMenuRef = React.useRef<HTMLDivElement>(null);
@@ -52,11 +56,16 @@ const ToolbarDropdown = ({ menuTitle, items }: ItemsProps) => {
     }
   };
 
+  const isActiveItem = () => {
+    return !!items?.some(item => item.link === pathname);
+  };
+
   return (
     <React.Fragment>
       <ToolbarItemDropdown
         {...baseButtonProps}
         $isOpen={isOpen}
+        $isActive={isActiveItem()}
         ref={toolbarItemRef}
         id={`${menuTitle}-menu`}
         aria-controls={isOpen ? `${menuTitle}-menu` : undefined}
@@ -88,7 +97,7 @@ const ToolbarDropdown = ({ menuTitle, items }: ItemsProps) => {
             <Paper>
               <MenuList autoFocusItem={isOpen} onMouseLeave={handleDropdownClose}>
                 {items?.map(item => (
-                  <MenuItem key={item.title} component={Link} to={item.link}>
+                  <MenuItem key={item.title} $isActive={pathname === item.link} component={Link} to={item.link}>
                     {item.title}
                   </MenuItem>
                 ))}
