@@ -43,7 +43,7 @@ export const LogoContainer = styled(MuiTypography)`
   }
 ` as typeof MuiTypography;
 
-export const MenuItemsWrapper = styled.div`
+export const ToolbarItemsWrapper = styled.div`
   height: 100%;
   margin-left: 20px;
 `;
@@ -63,10 +63,11 @@ export const BaseNavbarButton = styled(MuiButton)`
   }
 `;
 
-export const NavbarItemBase = styled(MuiButton)`
+export const ToolbarItem = styled(MuiButton)`
   && {
     height: 100%;
     background-color: ${white} !important;
+    color: rgb(70, 70, 80);
     text-transform: none;
     border-left: 1px solid #fff;
     border-right: 1px solid #fff;
@@ -74,7 +75,7 @@ export const NavbarItemBase = styled(MuiButton)`
   }
 `;
 
-export const NavbarItemDropdown = styled(NavbarItemBase)<MenuButtonProps>`
+export const ToolbarItemDropdown = styled(ToolbarItem)<MenuButtonProps>`
   && {
     ${props => props.$isOpen && `
     color: ${primaryColor};
@@ -87,14 +88,14 @@ export const NavbarItemDropdown = styled(NavbarItemBase)<MenuButtonProps>`
   }
 `;
 
-export const NavBarItemLink = styled(NavbarItemBase)`
+export const ToolbarItemLink = styled(ToolbarItem)`
   && {
     padding: 0 12px;
     :hover {
       color: ${primaryColor};
     }
   }
-`;
+` as typeof MuiButton;
 
 export const Button = styled(MuiButton)<MenuButtonProps>`
   && {
