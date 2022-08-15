@@ -68,6 +68,7 @@ module.exports = {
     'react/display-name': 'off',
     'react/no-array-index-key': 'off',
     'react/require-default-props': 'off',
+    'react/jsx-fragments': 'off',
 
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
     'react/jsx-no-duplicate-props': ['error', { ignoreCase: false }],

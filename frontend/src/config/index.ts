@@ -5,4 +5,9 @@ export const urls = {};
 export const publicUrls = {
   home: '/',
   dashboard: '/dashboard',
-};
+  segments: '/segments',
+  routes: '/routes',
+  goals: '/goals',
+  heatmaps: '/heatmaps',
+  challenges: '/challenges',
+} as const;
