@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 import Grow from '@mui/material/Grow';
 import Popper from '@mui/material/Popper';
 
 import { KeyboardArrowDown } from '@mui/icons-material';
-import { MenuList, Paper, ToolbarItemDropdown, ToolbarItemLink, MenuItem } from './styles';
+import { SubscriptionLabel, MenuList, Paper, ToolbarItemDropdown, ToolbarItemLink, MenuItem } from './styles';
 
-import { ItemsProps } from '../../constants/headerMenu';
+import {
+  LinkMenuItem, DropdownMenuItem, MenuItemProps, DropdownItemProps, filterPremiumAndNormalItems,
+} from '../../constants/globalHeader';
 
-const baseButtonProps = {
+const baseToolbarItemProps = {
   variant: 'text',
   color: 'inherit',
   disableElevation: true,
@@ -18,13 +20,13 @@ const baseButtonProps = {
   disableTouchRipple: true,
 } as const;
 
-const ToolbarLink = ({ menuTitle, link }: { menuTitle: string; link: string }) => {
+const ToolbarLink = ({ menuTitle, link }: LinkMenuItem) => {
   const { pathname } = useLocation();
 
   return (
     <ToolbarItemLink
-      {...baseButtonProps}
       $isActive={pathname === link}
+      {...baseToolbarItemProps}
       id={`${menuTitle}-link`}
       component={Link}
       to={link}
@@ -34,9 +36,68 @@ const ToolbarLink = ({ menuTitle, link }: { menuTitle: string; link: string }) =
   );
 };
 
-const ToolbarDropdown = ({ menuTitle, items }: ItemsProps) => {
-  const [isOpen, setIsOpen] = React.useState(false);
+interface DropDownMenuProps {
+  isOpen: boolean;
+  items: DropdownItemProps[],
+  toolbarItemRef: React.RefObject<HTMLButtonElement>;
+  handleDropdownClose: (event: React.MouseEvent<HTMLElement>) => void;
+}
+
+const DropdownMenu = React.forwardRef<HTMLDivElement, DropDownMenuProps>(
+  ({ isOpen, toolbarItemRef, handleDropdownClose, items }, ref) => {
+    const { pathname } = useLocation();
+    const { premiumItems, normalItems } = useMemo(() => filterPremiumAndNormalItems(items), [items]);
+
+    return (
+      <Popper
+        open={isOpen}
+        anchorEl={toolbarItemRef.current}
+        ref={ref}
+        role={undefined}
+        placement="bottom-start"
+        transition
+        disablePortal
+      >
+        {({ TransitionProps, placement }) => (
+          <Grow
+            {...TransitionProps}
+            style={{
+              transformOrigin: placement === 'bottom-start' ? 'left top' : 'left bottom',
+            }}
+          >
+            <Paper>
+              <MenuList autoFocusItem={isOpen} onMouseLeave={handleDropdownClose}>
+                {normalItems.map(item => (
+                  <MenuItem key={item.title} $isActive={pathname === item.link} component={Link} to={item.link}>
+                    {item.title}
+                  </MenuItem>
+                ))}
+
+                {premiumItems.length && <SubscriptionLabel>SUBSCRIPTION</SubscriptionLabel>}
+
+                {premiumItems.map(item => (
+                  <MenuItem
+                    key={item.title}
+                    $premium
+                    $isActive={pathname === item.link}
+                    component={Link}
+                    to={item.link}
+                  >
+                    {item.title}
+                  </MenuItem>
+                ))}
+              </MenuList>
+            </Paper>
+          </Grow>
+        )}
+      </Popper>
+    );
+  },
+);
+
+const ToolbarDropdown = ({ menuTitle, items }: DropdownMenuItem) => {
   const { pathname } = useLocation();
+  const [isOpen, setIsOpen] = React.useState(false);
 
   const toolbarItemRef = React.useRef<HTMLButtonElement>(null);
   const dropdownMenuRef = React.useRef<HTMLDivElement>(null);
@@ -56,16 +117,12 @@ const ToolbarDropdown = ({ menuTitle, items }: ItemsProps) => {
     }
   };
 
-  const isActiveItem = () => {
-    return !!items?.some(item => item.link === pathname);
-  };
-
   return (
     <React.Fragment>
       <ToolbarItemDropdown
-        {...baseButtonProps}
+        $isActive={!!items.some(item => item.link === pathname)}
         $isOpen={isOpen}
-        $isActive={isActiveItem()}
+        {...baseToolbarItemProps}
         ref={toolbarItemRef}
         id={`${menuTitle}-menu`}
         aria-controls={isOpen ? `${menuTitle}-menu` : undefined}
@@ -78,39 +135,18 @@ const ToolbarDropdown = ({ menuTitle, items }: ItemsProps) => {
         {menuTitle}
       </ToolbarItemDropdown>
 
-      <Popper
-        open={isOpen}
-        anchorEl={toolbarItemRef.current}
+      <DropdownMenu
+        isOpen={isOpen}
+        items={items}
+        handleDropdownClose={handleDropdownClose}
+        toolbarItemRef={toolbarItemRef}
         ref={dropdownMenuRef}
-        role={undefined}
-        placement="bottom-start"
-        transition
-        disablePortal
-      >
-        {({ TransitionProps, placement }) => (
-          <Grow
-            {...TransitionProps}
-            style={{
-              transformOrigin: placement === 'bottom-start' ? 'left top' : 'left bottom',
-            }}
-          >
-            <Paper>
-              <MenuList autoFocusItem={isOpen} onMouseLeave={handleDropdownClose}>
-                {items?.map(item => (
-                  <MenuItem key={item.title} $isActive={pathname === item.link} component={Link} to={item.link}>
-                    {item.title}
-                  </MenuItem>
-                ))}
-              </MenuList>
-            </Paper>
-          </Grow>
-        )}
-      </Popper>
+      />
     </React.Fragment>
   );
 };
 
-const NavItem = ({ menuTitle, items, link }: ItemsProps) => {
+const NavItem = ({ menuTitle, items, link }: MenuItemProps) => {
   if (link) {
     return <ToolbarLink menuTitle={menuTitle} link={link} />;
   }

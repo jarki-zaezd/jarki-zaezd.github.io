@@ -1,21 +1,27 @@
-import { publicUrls } from '../config';
+import { Either } from '../types';
+import { publicUrls, UrlValues } from '../config';
 
-type UrlKeys = keyof typeof publicUrls;
-type UrlValues = typeof publicUrls[UrlKeys];
-
-export interface ItemProps {
+export interface DropdownItemProps {
   title: string;
   link: UrlValues;
   requireSub: boolean;
 }
 
-export interface ItemsProps {
+interface MenuItemBasics {
   menuTitle: string;
-  link?: UrlValues;
-  items?: ItemProps[];
 }
 
-export const headerMenuItems: ItemsProps[] = [
+export interface DropdownMenuItem extends MenuItemBasics {
+  items: DropdownItemProps[];
+}
+
+export interface LinkMenuItem extends MenuItemBasics {
+  link: UrlValues;
+}
+
+export type MenuItemProps = Either<DropdownMenuItem, LinkMenuItem>;
+
+const globalHeaderItems: MenuItemProps[] = [
   {
     menuTitle: 'Dashboard',
     items: [
@@ -126,3 +132,15 @@ export const headerMenuItems: ItemsProps[] = [
     link: publicUrls.challenges,
   },
 ];
+
+export const filterPremiumAndNormalItems = (items: DropdownItemProps[]) => {
+  return items.reduce<{
+    premiumItems: DropdownItemProps[],
+    normalItems: DropdownItemProps[]
+  }>((accum, current) => {
+    const listName = current.requireSub ? 'premiumItems' : 'normalItems';
+    return { ...accum, [listName]: [...accum[listName], current] };
+  }, { premiumItems: [], normalItems: [] });
+};
+
+export default globalHeaderItems;

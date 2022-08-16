@@ -70,6 +70,7 @@ type StyleButtonProps = {
 
 type StyleMenuItemProps = {
   $isActive: boolean;
+  $premium?: boolean
 };
 
 type ComponentProp<C> = {
@@ -133,9 +134,17 @@ export const MenuItemStyle = styled(MuiMenuItem)<StyleMenuItemProps>`
   && {
     height: 46px;
     font-size: 14px;
+
+    :hover {
+      background-color: rgb(240, 240, 245) !important;
+    }
+
     ${props => props.$isActive && `
       color: black;
       font-weight: 700;
+    `}
+    ${props => props.$premium && `
+      background-color: #f7f7fa;
     `}
   }
 `;
@@ -145,3 +154,11 @@ export const MenuItem = <C extends React.ElementType>(
 ) => {
   return <MenuItemStyle {...props} />;
 };
+
+export const SubscriptionLabel = styled(MuiTypography)`
+  && {
+    font-size: 9px;
+    padding: 12px 12px 0 12px;
+    background-color: #f7f7fa;
+  }
+`;

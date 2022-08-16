@@ -11,3 +11,6 @@ export const publicUrls = {
   heatmaps: '/heatmaps',
   challenges: '/challenges',
 } as const;
+
+export type UrlKeys = keyof typeof publicUrls;
+export type UrlValues = typeof publicUrls[UrlKeys];
