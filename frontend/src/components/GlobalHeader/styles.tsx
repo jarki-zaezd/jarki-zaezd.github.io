@@ -13,6 +13,20 @@ import { globalHeaderHeight, lightGray, primaryColor, white } from '../../config
 
 import appLogo from '../../logo.svg';
 
+type ToolbarItemProps = {
+  $isOpen?: boolean;
+  $isActive: boolean;
+};
+
+type DropdownItemProps = {
+  $isActive: boolean;
+  $premium?: boolean
+};
+
+type ComponentProp<C> = {
+  component?: C
+};
+
 export const Offset = styled.div`
   box-sizing: border-box;
   height: ${globalHeaderHeight}px;
@@ -63,21 +77,7 @@ export const ToolbarItem = styled(MuiButton)`
   }
 `;
 
-type StyleButtonProps = {
-  $isOpen?: boolean;
-  $isActive: boolean;
-};
-
-type StyleMenuItemProps = {
-  $isActive: boolean;
-  $premium?: boolean
-};
-
-type ComponentProp<C> = {
-  component?: C
-};
-
-export const ToolbarItemDropdown = styled(ToolbarItem)<StyleButtonProps>`
+export const ToolbarItemDropdown = styled(ToolbarItem)<ToolbarItemProps>`
   && {
     border-radius: 0;
 
@@ -95,7 +95,7 @@ export const ToolbarItemDropdown = styled(ToolbarItem)<StyleButtonProps>`
   }
 `;
 
-export const ToolbarItemLinkStyle = styled(ToolbarItem)<StyleButtonProps>`
+export const ToolbarItemLinkStyle = styled(ToolbarItem)<ToolbarItemProps>`
   && {
     border-radius: 0;
 
@@ -111,8 +111,10 @@ export const ToolbarItemLinkStyle = styled(ToolbarItem)<StyleButtonProps>`
   }
 `;
 
+// export type StyleComponent<T, C extends React.ElementType> = T<C, ComponentProp<C>>;
+
 export const ToolbarItemLink = <C extends React.ElementType>(
-  props: ButtonProps<C, StyleButtonProps & ComponentProp<C>>,
+  props: ButtonProps<C, ToolbarItemProps & ComponentProp<C>>,
 ) => {
   return <ToolbarItemLinkStyle {...props} />;
 };
@@ -130,7 +132,7 @@ export const MenuList = styled(MuiMenuList)`
   }
 `;
 
-export const MenuItemStyle = styled(MuiMenuItem)<StyleMenuItemProps>`
+export const MenuItemStyle = styled(MuiMenuItem)<DropdownItemProps>`
   && {
     height: 46px;
     font-size: 14px;
@@ -150,7 +152,7 @@ export const MenuItemStyle = styled(MuiMenuItem)<StyleMenuItemProps>`
 `;
 
 export const MenuItem = <C extends React.ElementType>(
-  props: MenuItemProps<C, StyleMenuItemProps & ComponentProp<C>>,
+  props: MenuItemProps<C, DropdownItemProps & ComponentProp<C>>,
 ) => {
   return <MenuItemStyle {...props} />;
 };
